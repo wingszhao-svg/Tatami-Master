@@ -2,12 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Tatami Master</title>
+    <!-- 网络字体：确保 CJK/Thai 字符在所有平台（尤其 iOS iframe）下正确渲染 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400&family=Noto+Sans+Thai:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            /* 系统的默认显示字体栈 + Emoji 兜底字体栈 */
+            font-family: 'Noto Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Thai', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
@@ -50,16 +56,71 @@
             gap: 6px;
         }
 
-        .lang-switcher select {
-            padding: 6px 12px;
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-switcher label {
+            font-weight: 600;
+            color: #666;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        /* 核心修复：通过自定义样式和隐藏原生 select 来解决 iOS 选中项乱码 */
+        .select-wrapper {
+            position: relative;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .select-trigger {
+            padding: 8px 32px 8px 12px;
             font-size: 14px;
+            background: white;
+            border: 1px solid #e0e0e0;
             border-radius: 8px;
-            border: 1px solid #ddd;
-            outline: none;
-            cursor: pointer;
             color: #2C3E36;
             font-weight: 600;
-            background: white;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            pointer-events: none; /* 让点击穿透到下面的 select */
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .select-trigger::after {
+            content: "";
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #2C3E36;
+        }
+
+        .lang-switcher select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0; /* 交互依然存在，但视觉上不可见 */
+            cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
         }
     </style>
 </head>
@@ -67,22 +128,25 @@
 <body>
 
     <div class="lang-switcher">
-        <label for="lang-select">🌐 Language / 言語 / 语言:</label>
-        <select id="lang-select" onchange="switchLanguage(this.value)">
-            <option value="en">English</option>
-            <option value="ja">日本語</option>
-            <option value="zhHans">简体中文</option>
-            <option value="zhHant">繁體中文</option>
-            <option value="ko">한국어</option>
-            <option value="id">Bahasa Indonesia</option>
-            <option value="vi">Tiếng Việt</option>
-            <option value="th">ไทย</option>
-            <option value="pt">Português</option>
-            <option value="es">Español</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
-            <option value="it">Italiano</option>
-        </select>
+        <label for="lang-select">Language / 言語 / 语言:</label>
+        <div class="select-wrapper">
+            <div id="select-trigger" class="select-trigger">English</div>
+            <select id="lang-select" onchange="switchLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+                <option value="zhHans">简体中文</option>
+                <option value="zhHant">繁體中文</option>
+                <option value="ko">한국어</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="th">ไทย</option>
+                <option value="pt">Português</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+            </select>
+        </div>
     </div>
 
     <div class="lang-section" data-lang="en">
@@ -559,11 +623,37 @@
     </div>
 
     <script>
+        const LANG_MAP = {
+            'en': 'English',
+            'ja': '\u65E5\u672C\u8A9E', // 日本語
+            'zhHans': '\u7B80\u4F53\u4E2D\u6587', // 简体中文
+            'zhHant': '\u7E41\u9AD4\u4E2D\u6587', // 繁體中文
+            'ko': '\uD55C\uAD6D\uC5B4', // 한국어
+            'id': 'Bahasa Indonesia',
+            'vi': 'Ti\u1EBFng Vi\u1EC7t',
+            'th': '\u0E44\u0E17\u0E22',
+            'pt': 'Portugu\u00EAs',
+            'es': 'Espa\u00F1ol',
+            'de': 'Deutsch',
+            'fr': 'Fran\u00E7ais',
+            'it': 'Italiano'
+        };
+
         function switchLanguage(lang) {
             document.querySelectorAll('.lang-section').forEach(function (el) { el.classList.remove('active'); });
             const activeSection = document.querySelector('.lang-section[data-lang="' + lang + '"]');
             if (activeSection) activeSection.classList.add('active');
-            document.getElementById('lang-select').value = lang;
+            
+            // 更新 UI 显示
+            const select = document.getElementById('lang-select');
+            if (select) select.value = lang;
+            
+            const trigger = document.getElementById('select-trigger');
+            if (trigger) {
+                // 使用硬编码的 Unicode 转义字符串，绝对避免乱码
+                trigger.innerText = LANG_MAP[lang] || lang;
+            }
+
             document.documentElement.lang = lang;
             const url = new URL(window.location);
             url.searchParams.set('lang', lang);
