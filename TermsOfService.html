@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
@@ -20,22 +19,18 @@
             padding: 20px;
             color: #333;
         }
-
         h1,
         h2 {
             color: #2C3E36;
         }
-
         .lang-section {
             display: none;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
         }
-
         .lang-section.active {
             display: block;
         }
-
         .lang-switcher {
             margin-bottom: 20px;
             padding: 12px;
@@ -46,7 +41,6 @@
             justify-content: flex-end;
             gap: 10px;
         }
-
         .lang-switcher label {
             font-size: 14px;
             color: #666;
@@ -55,7 +49,6 @@
             align-items: center;
             gap: 6px;
         }
-
         .lang-switcher {
             display: flex;
             align-items: center;
@@ -69,21 +62,18 @@
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
-
         .lang-switcher label {
             font-weight: 600;
             color: #666;
             font-size: 13px;
             white-space: nowrap;
         }
-
         /* 核心修复：通过自定义样式和隐藏原生 select 来解决 iOS 选中项乱码 */
         .select-wrapper {
             position: relative;
             display: inline-block;
             min-width: 120px;
         }
-
         .select-trigger {
             padding: 8px 32px 8px 12px;
             font-size: 14px;
@@ -99,7 +89,6 @@
             pointer-events: none; /* 让点击穿透到下面的 select */
             font-family: system-ui, -apple-system, sans-serif;
         }
-
         .select-trigger::after {
             content: "";
             position: absolute;
@@ -110,7 +99,6 @@
             border-right: 5px solid transparent;
             border-top: 5px solid #2C3E36;
         }
-
         .lang-switcher select {
             position: absolute;
             top: 0;
@@ -124,9 +112,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="lang-switcher">
         <label for="lang-select">Language / 言語 / 语言:</label>
         <div class="select-wrapper">
@@ -148,7 +134,6 @@
             </select>
         </div>
     </div>
-
     <div class="lang-section" data-lang="en">
         <h1>Terms of Service</h1>
         <p><strong>Effective Date</strong>: February 28, 2026</p>
@@ -185,7 +170,6 @@
         <p>If you encounter any issues while using the App, or if you have any questions about these Terms, please
             contact us for technical support at: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="ja">
         <h1>利用規約</h1>
         <p><strong>発効日</strong>: 2026-02-28</p>
@@ -214,7 +198,6 @@
         <h2>お問い合わせ</h2>
         <p>アプリの使用中に問題が発生した場合、または本規約についてご質問がある場合は、テクニカル サポートについて次のアドレスまでご連絡ください: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="zhHans">
         <h1>服务条款</h1>
         <p><strong>生效日期</strong>: 2026-02-28</p>
@@ -237,7 +220,6 @@
         <h2>联系我们</h2>
         <p>如果您在使用应用程序时遇到任何问题，或者对这些条款有任何疑问，请联系我们获取技术支持： vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="zhHant">
         <h1>服務條款</h1>
         <p><strong>生效日期</strong>: 2026-02-28</p>
@@ -260,7 +242,6 @@
         <h2>聯絡我們</h2>
         <p>如果您在使用應用程式時遇到任何問題，或對這些條款有任何疑問，請聯絡我們以取得技術支援： vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="ko">
         <h1>서비스 약관</h1>
         <p><strong>발효일</strong>: 2026-02-28</p>
@@ -287,7 +268,6 @@
         <h2>문의하기</h2>
         <p>앱을 사용하는 동안 문제가 발생하거나 본 약관에 대해 질문이 있는 경우 기술 지원을 위해 vincentapp3@gmail.com으로 문의해 주세요.</p>
     </div>
-
     <div class="lang-section" data-lang="id">
         <h1>Ketentuan Layanan</h1>
         <p><strong>Tanggal berlaku</strong>: 2026-02-28</p>
@@ -327,7 +307,6 @@
         <p>Jika Anda mengalami masalah apa pun saat menggunakan Aplikasi, atau jika Anda memiliki pertanyaan tentang
             Ketentuan ini, silakan hubungi kami untuk dukungan teknis di: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="vi">
         <h1>Điều khoản dịch vụ</h1>
         <p><strong>Ngày có hiệu lực</strong>: 2026-02-28</p>
@@ -366,7 +345,6 @@
         <p>Nếu bạn gặp bất kỳ vấn đề nào khi sử dụng Ứng dụng hoặc nếu bạn có bất kỳ câu hỏi nào về các Điều khoản này,
             vui lòng liên hệ với chúng tôi để được hỗ trợ kỹ thuật tại: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="th">
         <h1>ข้อกำหนดในการให้บริการ</h1>
         <p><strong>วันที่มีผลบังคับใช้</strong>: 2026-02-28</p>
@@ -405,7 +383,6 @@
         <p>หากคุณพบปัญหาใด ๆ ในขณะที่ใช้แอป หรือหากคุณมีคำถามใด ๆ เกี่ยวกับข้อกำหนดเหล่านี้
             โปรดติดต่อเราเพื่อขอรับการสนับสนุนด้านเทคนิคที่: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="pt">
         <h1>Termos de Serviço</h1>
         <p><strong>Data Efetiva</strong>: 2026-02-28</p>
@@ -445,7 +422,6 @@
         <p>Se você encontrar algum problema ao usar o aplicativo ou se tiver alguma dúvida sobre estes Termos, entre em
             contato conosco para obter suporte técnico em: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="es">
         <h1>Términos de servicio</h1>
         <p><strong>Fecha de vigencia</strong>: 2026-02-28</p>
@@ -486,7 +462,6 @@
         <p>Si tiene algún problema al utilizar la aplicación o si tiene alguna pregunta sobre estos Términos,
             comuníquese con nosotros para obtener asistencia técnica en: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="de">
         <h1>Nutzungsbedingungen</h1>
         <p><strong>Datum des Inkrafttretens</strong>: 2026-02-28</p>
@@ -527,7 +502,6 @@
         <p>Wenn bei der Nutzung der App Probleme auftreten oder Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie
             uns bitte für technischen Support unter: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="fr">
         <h1>Conditions d'utilisation</h1>
         <p><strong>Date d'entrée en vigueur</strong>: 2026-02-28</p>
@@ -537,19 +511,19 @@
         </p>
         <h2>1. Abonnements et achats</h2>
         <p>L'application propose du contenu premium débloqué via des achats ou des abonnements intégrés. En achetant un
-            abonnement, vous acceptez les conditions suivantes :</p>
+            abonnement, vous acceptez les conditions suivantes :</p>
         <ul>
-            <li><strong>Paiement</strong> : les paiements sont traités directement via votre identifiant Apple ou votre
+            <li><strong>Paiement</strong> : les paiements sont traités directement via votre identifiant Apple ou votre
                 compte Google Play en utilisant votre mode de paiement associé lors de la confirmation de l'achat.</li>
-            <li><strong>Renouvellement automatique</strong> : les abonnements se renouvellent automatiquement, sauf si
+            <li><strong>Renouvellement automatique</strong> : les abonnements se renouvellent automatiquement, sauf si
                 le renouvellement automatique est désactivé ou annulé au moins 24 heures avant la fin de la période de
                 facturation en cours. Votre compte sera facturé pour le renouvellement dans les 24 heures avant la fin
                 de la période en cours.</li>
-            <li><strong>Annulation</strong> : vous pouvez gérer et annuler vos abonnements en accédant aux paramètres de
+            <li><strong>Annulation</strong> : vous pouvez gérer et annuler vos abonnements en accédant aux paramètres de
                 votre compte App Store ou Google Play Store après l'achat. L'annulation d'un abonnement ne mettra pas
                 immédiatement fin à votre accès premium ; vous continuerez à y avoir accès jusqu'à la fin du cycle de
                 facturation en cours.</li>
-            <li><strong>Restaurer les achats</strong> : vous pouvez restaurer vos achats précédents à tout moment en
+            <li><strong>Restaurer les achats</strong> : vous pouvez restaurer vos achats précédents à tout moment en
                 utilisant la fonction "Restaurer les achats" trouvée dans la page d'abonnement ou de paramètres de
                 l'application. Cela garantit que vous conservez l’accès au contenu premium sur tous les appareils ou
                 après la réinstallation.</li>
@@ -568,9 +542,8 @@
             modification constitue votre acceptation des Conditions révisées.</p>
         <h2>Contactez-nous</h2>
         <p>Si vous rencontrez des problèmes lors de l'utilisation de l'application ou si vous avez des questions sur ces
-            conditions, veuillez nous contacter pour obtenir une assistance technique à : vincentapp3@gmail.com</p>
+            conditions, veuillez nous contacter pour obtenir une assistance technique à : vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="it">
         <h1>Termini di servizio</h1>
         <p><strong>Data di entrata in vigore</strong>: 2026-02-28</p>
@@ -611,7 +584,6 @@
         <p>Se riscontri problemi durante l'utilizzo dell'App o se hai domande sui presenti Termini, contattaci per
             supporto tecnico all'indirizzo: vincentapp3@gmail.com</p>
     </div>
-
     <script>
         const LANG_MAP = {
             'en': 'English',
@@ -628,7 +600,6 @@
             'fr': 'Fran\u00E7ais',
             'it': 'Italiano'
         };
-
         function switchLanguage(lang) {
             document.querySelectorAll('.lang-section').forEach(function (el) { el.classList.remove('active'); });
             const activeSection = document.querySelector('.lang-section[data-lang="' + lang + '"]');
@@ -643,7 +614,6 @@
                 // 使用硬编码的 Unicode 转义字符串，绝对避免乱码
                 trigger.innerText = LANG_MAP[lang] || lang;
             }
-
             document.documentElement.lang = lang;
             const url = new URL(window.location);
             url.searchParams.set('lang', lang);
@@ -658,5 +628,4 @@
         };
     </script>
 </body>
-
 </html>
