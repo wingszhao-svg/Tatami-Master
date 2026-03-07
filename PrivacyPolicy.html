@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
@@ -20,22 +19,18 @@
             padding: 20px;
             color: #333;
         }
-
         h1,
         h2 {
             color: #2C3E36;
         }
-
         .lang-section {
             display: none;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
         }
-
         .lang-section.active {
             display: block;
         }
-
         .lang-switcher {
             margin-bottom: 20px;
             padding: 12px;
@@ -46,7 +41,6 @@
             justify-content: flex-end;
             gap: 10px;
         }
-
         .lang-switcher label {
             font-size: 14px;
             color: #666;
@@ -55,7 +49,6 @@
             align-items: center;
             gap: 6px;
         }
-
         .lang-switcher {
             display: flex;
             align-items: center;
@@ -69,21 +62,18 @@
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
-
         .lang-switcher label {
             font-weight: 600;
             color: #666;
             font-size: 13px;
             white-space: nowrap;
         }
-
         /* 核心修复：通过自定义样式和隐藏原生 select 来解决 iOS 选中项乱码 */
         .select-wrapper {
             position: relative;
             display: inline-block;
             min-width: 120px;
         }
-
         .select-trigger {
             padding: 8px 32px 8px 12px;
             font-size: 14px;
@@ -99,7 +89,6 @@
             pointer-events: none; /* 让点击穿透到下面的 select */
             font-family: system-ui, -apple-system, sans-serif;
         }
-
         .select-trigger::after {
             content: "";
             position: absolute;
@@ -110,7 +99,6 @@
             border-right: 5px solid transparent;
             border-top: 5px solid #2C3E36;
         }
-
         .lang-switcher select {
             position: absolute;
             top: 0;
@@ -124,9 +112,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="lang-switcher">
         <label for="lang-select">Language / 言語 / 语言:</label>
         <div class="select-wrapper">
@@ -148,7 +134,6 @@
             </select>
         </div>
     </div>
-
     <div class="lang-section" data-lang="en">
         <h1>Privacy Policy</h1>
         <p><strong>Effective Date</strong>: February 28, 2026</p>
@@ -186,7 +171,6 @@
         <h2>Contact Us</h2>
         <p>If you have any questions regarding our Privacy Policy, please contact us at: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="ja">
         <h1>プライバシーポリシー</h1>
         <p><strong>発効日</strong>: 2026-02-28</p>
@@ -218,7 +202,6 @@
         <h2>お問い合わせ</h2>
         <p>弊社のプライバシー ポリシーに関してご質問がある場合は、vincentapp3@gmail.com までご連絡ください。</p>
     </div>
-
     <div class="lang-section" data-lang="zhHans">
         <h1>隐私政策</h1>
         <p><strong>生效日期</strong>: 2026-02-28</p>
@@ -244,7 +227,6 @@
         <h2>联系我们</h2>
         <p>如果您对我们的隐私政策有任何疑问，请通过以下方式联系我们： vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="zhHant">
         <h1>隱私權政策</h1>
         <p><strong>生效日期</strong>: 2026-02-28</p>
@@ -270,7 +252,6 @@
         <h2>聯絡我們</h2>
         <p>如果您對我們的隱私權政策有任何疑問，請透過以下方式與我們聯絡： vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="ko">
         <h1>개인 정보 보호 정책</h1>
         <p><strong>발효일</strong>: 2026-02-28</p>
@@ -300,7 +281,6 @@
         <h2>문의하기</h2>
         <p>개인 정보 보호 정책에 관해 궁금한 점이 있으면 vincentapp3@gmail.com으로 문의하세요.</p>
     </div>
-
     <div class="lang-section" data-lang="id">
         <h1>Kebijakan Privasi</h1>
         <p><strong>Tanggal berlaku</strong>: 2026-02-28</p>
@@ -340,7 +320,6 @@
         <p>Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi kami, silakan hubungi kami di: vincentapp3@gmail.com
         </p>
     </div>
-
     <div class="lang-section" data-lang="vi">
         <h1>Chính sách bảo mật</h1>
         <p><strong>Ngày có hiệu lực</strong>: 2026-02-28</p>
@@ -380,7 +359,6 @@
         <p>Nếu bạn có bất kỳ câu hỏi nào liên quan đến Chính sách quyền riêng tư của chúng tôi, vui lòng liên hệ với
             chúng tôi theo địa chỉ: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="th">
         <h1>นโยบายความเป็นส่วนตัว</h1>
         <p><strong>วันที่มีผลบังคับใช้</strong>: 2026-02-28</p>
@@ -420,7 +398,6 @@
         <h2>ติดต่อเรา</h2>
         <p>หากคุณมีคำถามใด ๆ เกี่ยวกับนโยบายความเป็นส่วนตัวของเรา โปรดติดต่อเราที่: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="pt">
         <h1>política de Privacidade</h1>
         <p><strong>Data Efetiva</strong>: 2026-02-28</p>
@@ -459,7 +436,6 @@
         <p>Se você tiver alguma dúvida sobre nossa Política de Privacidade, entre em contato conosco:
             vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="es">
         <h1>política de privacidad</h1>
         <p><strong>Fecha de vigencia</strong>: 2026-02-28</p>
@@ -499,7 +475,6 @@
         <h2>Contáctenos</h2>
         <p>Si tiene alguna pregunta sobre nuestra Política de Privacidad, contáctenos en: vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="de">
         <h1>Datenschutzrichtlinie</h1>
         <p><strong>Datum des Inkrafttretens</strong>: 2026-02-28</p>
@@ -539,7 +514,6 @@
         <p>Wenn Sie Fragen zu unserer Datenschutzrichtlinie haben, kontaktieren Sie uns bitte unter:
             vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="fr">
         <h1>politique de confidentialité</h1>
         <p><strong>Date d'entrée en vigueur</strong>: 2026-02-28</p>
@@ -549,9 +523,9 @@
         <h2>1. Informations que nous collectons</h2>
         <p>L'application est conçue pour minimiser la collecte de données personnelles.</p>
         <ul>
-            <li><strong>Données d'utilisation</strong> : nous pouvons collecter des données anonymes et agrégées sur la
+            <li><strong>Données d'utilisation</strong> : nous pouvons collecter des données anonymes et agrégées sur la
                 façon dont vous interagissez avec l'application afin d'améliorer l'expérience utilisateur.</li>
-            <li><strong>Données d'abonnement et d'achat</strong> : l'application propose du contenu premium débloqué via
+            <li><strong>Données d'abonnement et d'achat</strong> : l'application propose du contenu premium débloqué via
                 des achats ou des abonnements intégrés. Si vous effectuez un achat ou vous abonnez, la transaction est
                 traitée directement via l'Apple App Store ou le Google Play Store. Nous utilisons un service tiers
                 sécurisé (RevenueCat) pour gérer votre statut d'admissibilité de manière anonyme à l'aide d'un
@@ -580,7 +554,6 @@
         <p>Si vous avez des questions concernant notre politique de confidentialité, veuillez nous contacter à :
             vincentapp3@gmail.com</p>
     </div>
-
     <div class="lang-section" data-lang="it">
         <h1>politica sulla riservatezza</h1>
         <p><strong>Data di entrata in vigore</strong>: 2026-02-28</p>
@@ -621,7 +594,6 @@
         <p>In caso di domande relative alla nostra Informativa sulla privacy, contattaci all'indirizzo:
             vincentapp3@gmail.com</p>
     </div>
-
     <script>
         const LANG_MAP = {
             'en': 'English',
@@ -638,7 +610,6 @@
             'fr': 'Fran\u00E7ais',
             'it': 'Italiano'
         };
-
         function switchLanguage(lang) {
             document.querySelectorAll('.lang-section').forEach(function (el) { el.classList.remove('active'); });
             const activeSection = document.querySelector('.lang-section[data-lang="' + lang + '"]');
@@ -653,7 +624,6 @@
                 // 使用硬编码的 Unicode 转义字符串，绝对避免乱码
                 trigger.innerText = LANG_MAP[lang] || lang;
             }
-
             document.documentElement.lang = lang;
             const url = new URL(window.location);
             url.searchParams.set('lang', lang);
@@ -668,5 +638,4 @@
         };
     </script>
 </body>
-
 </html>
