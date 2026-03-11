@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
@@ -19,18 +20,22 @@
             padding: 20px;
             color: #333;
         }
+
         h1,
         h2 {
             color: #2C3E36;
         }
+
         .lang-section {
             display: none;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
         }
+
         .lang-section.active {
             display: block;
         }
+
         .lang-switcher {
             margin-bottom: 20px;
             padding: 12px;
@@ -41,6 +46,7 @@
             justify-content: flex-end;
             gap: 10px;
         }
+
         .lang-switcher label {
             font-size: 14px;
             color: #666;
@@ -49,6 +55,7 @@
             align-items: center;
             gap: 6px;
         }
+
         .lang-switcher {
             display: flex;
             align-items: center;
@@ -62,18 +69,21 @@
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
+
         .lang-switcher label {
             font-weight: 600;
             color: #666;
             font-size: 13px;
             white-space: nowrap;
         }
+
         /* 核心修复：通过自定义样式和隐藏原生 select 来解决 iOS 选中项乱码 */
         .select-wrapper {
             position: relative;
             display: inline-block;
             min-width: 120px;
         }
+
         .select-trigger {
             padding: 8px 32px 8px 12px;
             font-size: 14px;
@@ -89,6 +99,7 @@
             pointer-events: none; /* 让点击穿透到下面的 select */
             font-family: system-ui, -apple-system, sans-serif;
         }
+
         .select-trigger::after {
             content: "";
             position: absolute;
@@ -99,6 +110,7 @@
             border-right: 5px solid transparent;
             border-top: 5px solid #2C3E36;
         }
+
         .lang-switcher select {
             position: absolute;
             top: 0;
@@ -112,29 +124,116 @@
         }
     </style>
 </head>
+
 <body>
+
     <div class="lang-switcher">
         <label for="lang-select">Language / 言語 / 语言:</label>
         <div class="select-wrapper">
             <div id="select-trigger" class="select-trigger">English</div>
             <select id="lang-select" onchange="switchLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="ja">日本語</option>
                 <option value="zhHans">简体中文</option>
                 <option value="zhHant">繁體中文</option>
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
                 <option value="ko">한국어</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
                 <option value="id">Bahasa Indonesia</option>
                 <option value="vi">Tiếng Việt</option>
                 <option value="th">ไทย</option>
-                <option value="pt">Português</option>
-                <option value="es">Español</option>
-                <option value="de">Deutsch</option>
-                <option value="fr">Français</option>
-                <option value="it">Italiano</option>
             </select>
         </div>
     </div>
-    <div class="lang-section" data-lang="en">
+
+    <div class="lang-section" data-lang="zhHans">
+        <h1>隐私政策</h1>
+        <p><strong>生效日期</strong>: 2026-02-28</p>
+        <p>感谢您选择<strong>Tatami Master</strong>（“应用程序”）。我们尊重您的隐私并致力于保护它。本隐私政策解释了我们在收集、使用和披露您的信息方面的做法。</p>
+        <h2>1. 我们收集的信息</h2>
+        <p>该应用程序旨在最大限度地减少个人数据的收集。</p>
+        <ul>
+            <li><strong>使用数据</strong>：我们可能会收集有关您如何与应用程序交互的匿名汇总数据，以改善用户体验。</li>
+            <li><strong>订阅和购买数据</strong>：该应用程序提供通过应用内购买或订阅解锁的优质内容。如果您进行购买或订阅，交易将直接通过 Apple App Store 或 Google Play Store
+                处理。我们使用安全的第三方服务 (RevenueCat) 使用匿名应用程序用户 ID 匿名管理您的权利状态。我们不会在我们的服务器上处理、收集或存储您的付款详细信息。</li>
+        </ul>
+        <h2>2. 我们如何使用您的信息</h2>
+        <ul>
+            <li>提供、维护和改进应用程序的功能。</li>
+            <li>在您的设备上正确管理您的订阅并解锁优质内容。</li>
+        </ul>
+        <h2>3. 数据共享</h2>
+        <p>我们不会出售您的个人数据。我们可能会与受信任的服务提供商（例如 RevenueCat）共享匿名/汇总信息，严格用于提供必要的基础设施服务（例如，验证订阅收据）。</p>
+        <h2>4. 您的权利</h2>
+        <p>由于我们不需要帐户注册，因此与您的设备相关的任何数据都会链接到匿名标识符。您通常可以通过卸载应用程序来清除此数据。</p>
+        <h2>5. 本政策的变更</h2>
+        <p>我们保留随时更新或修改本隐私政策的权利，恕不另行通知。任何更改将在应用程序或我们的网站上发布更新后的政策后立即生效。您在任何修改后继续使用该应用程序即表示您接受修订后的隐私政策。</p>
+        <h2>联系我们</h2>
+        <p>如果您对我们的隐私政策有任何疑问，请通过以下方式联系我们： vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="zhHant">
+        <h1>隱私權政策</h1>
+        <p><strong>生效日期</strong>: 2026-02-28</p>
+        <p>感謝您選擇<strong>Tatami Master</strong>（“應用程式”）。我們尊重您的隱私並致力於保護它。本隱私權政策解釋了我們在收集、使用和揭露您的資訊方面的做法。</p>
+        <h2>1. 我們收集的資訊</h2>
+        <p>該應用程式旨在最大限度地減少個人資料的收集。</p>
+        <ul>
+            <li><strong>使用數據</strong>：我們可能會收集有關您如何與應用程式互動的匿名匯總數據，以改善用戶體驗。</li>
+            <li><strong>訂閱和購買數據</strong>：該應用程式提供透過應用程式內購買或訂閱解鎖的優質內容。如果您進行購買或訂閱，交易將直接透過 Apple App Store 或 Google Play
+                Store 處理。我們使用安全的第三方服務 (RevenueCat) 使用匿名應用程式使用者 ID 匿名管理您的權利狀態。我們不會在我們的伺服器上處理、收集或儲存您的付款詳細資訊。</li>
+        </ul>
+        <h2>2. 我們如何使用您的訊息</h2>
+        <ul>
+            <li>提供、維護和改進應用程式的功能。</li>
+            <li>在您的裝置上正確管理您的訂閱並解鎖優質內容。</li>
+        </ul>
+        <h2>3. 資料共享</h2>
+        <p>我們不會出售您的個人資料。我們可能會與受信任的服務提供者（例如 RevenueCat）共享匿名/匯總信息，嚴格用於提供必要的基礎設施服務（例如，驗證訂閱收據）。</p>
+        <h2>4. 您的權利</h2>
+        <p>由於我們不需要帳戶註冊，因此與您的裝置相關的任何資料都會連結到匿名識別碼。您通常可以透過卸載應用程式來清除此資料。</p>
+        <h2>5. 本政策的變更</h2>
+        <p>我們保留隨時更新或修改本隱私權政策的權利，恕不另行通知。任何變更將在應用程式或我們的網站上發布更新後的政策後立即生效。您在任何修改後繼續使用該應用程式即表示您接受修訂後的隱私權政策。</p>
+        <h2>聯絡我們</h2>
+        <p>如果您對我們的隱私權政策有任何疑問，請透過以下方式與我們聯絡： vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="ja">
+        <h1>プライバシーポリシー</h1>
+        <p><strong>発効日</strong>: 2026-02-28</p>
+        <p><strong>Tatami Master</strong> (「アプリ」) をお選びいただきありがとうございます。当社はお客様のプライバシーを尊重し、その保護に努めます。このプライバシー
+            ポリシーでは、お客様の情報の収集、使用、開示に関する当社の慣行について説明します。</p>
+        <h2>1. 当社が収集する情報</h2>
+        <p>アプリは個人データの収集を最小限に抑えるように設計されています。</p>
+        <ul>
+            <li><strong>使用状況データ</strong>: ユーザー エクスペリエンスを向上させるために、ユーザーがアプリをどのように操作するかに関する匿名の集計データを収集する場合があります。</li>
+            <li><strong>サブスクリプションと購入データ</strong>: このアプリは、アプリ内購入またはサブスクリプションを通じてロック解除されたプレミアム
+                コンテンツを提供します。購入または購読を行う場合、トランザクションは Apple App Store または Google Play ストアを通じて直接処理されます。当社は安全なサードパーティ サービス
+                (RevenueCat) を使用し、匿名のアプリ ユーザー ID を使用してお客様の資格ステータスを匿名で管理します。当社は、お客様のお支払いの詳細を当社のサーバー上で処理、収集、保存することはありません。
+            </li>
+        </ul>
+        <h2>2. お客様の情報の使用方法</h2>
+        <ul>
+            <li>アプリの機能を提供、維持、改善します。</li>
+            <li>サブスクリプションを管理し、デバイス間でプレミアム コンテンツのロックを正しく解除します。</li>
+        </ul>
+        <h2>3. データ共有</h2>
+        <p>当社はあなたの個人データを販売しません。当社は、必要なインフラストラクチャ サービス (サブスクリプション受領書の確認など) を提供する目的のみを目的として、信頼できるサービス プロバイダー (RevenueCat
+            など) と匿名/集約情報を共有する場合があります。</p>
+        <h2>4. お客様の権利</h2>
+        <p>アカウント登録は必要ないため、デバイスに関連付けられたデータは匿名の識別子にリンクされます。通常、このデータはアプリケーションをアンインストールすることでクリアできます。</p>
+        <h2>5. 本ポリシーの変更</h2>
+        <p>当社は、予告なくいつでも本プライバシー
+            ポリシーを更新または変更する権利を留保します。変更は、アプリ内または当社のウェブサイトに更新されたポリシーを掲載するとすぐに有効になります。変更後もアプリを継続して使用すると、改訂されたプライバシー
+            ポリシーに同意したことになります。</p>
+        <h2>お問い合わせ</h2>
+        <p>弊社のプライバシー ポリシーに関してご質問がある場合は、vincentapp3@gmail.com までご連絡ください。</p>
+    </div>
+
+<div class="lang-section" data-lang="en">
         <h1>Privacy Policy</h1>
         <p><strong>Effective Date</strong>: February 28, 2026</p>
         <p>Thank you for choosing <strong>Tatami Master</strong> ("the App"). We respect your privacy and are committed
@@ -171,88 +270,8 @@
         <h2>Contact Us</h2>
         <p>If you have any questions regarding our Privacy Policy, please contact us at: vincentapp3@gmail.com</p>
     </div>
-    <div class="lang-section" data-lang="ja">
-        <h1>プライバシーポリシー</h1>
-        <p><strong>発効日</strong>: 2026-02-28</p>
-        <p><strong>Tatami Master</strong> (「アプリ」) をお選びいただきありがとうございます。当社はお客様のプライバシーを尊重し、その保護に努めます。このプライバシー
-            ポリシーでは、お客様の情報の収集、使用、開示に関する当社の慣行について説明します。</p>
-        <h2>1. 当社が収集する情報</h2>
-        <p>アプリは個人データの収集を最小限に抑えるように設計されています。</p>
-        <ul>
-            <li><strong>使用状況データ</strong>: ユーザー エクスペリエンスを向上させるために、ユーザーがアプリをどのように操作するかに関する匿名の集計データを収集する場合があります。</li>
-            <li><strong>サブスクリプションと購入データ</strong>: このアプリは、アプリ内購入またはサブスクリプションを通じてロック解除されたプレミアム
-                コンテンツを提供します。購入または購読を行う場合、トランザクションは Apple App Store または Google Play ストアを通じて直接処理されます。当社は安全なサードパーティ サービス
-                (RevenueCat) を使用し、匿名のアプリ ユーザー ID を使用してお客様の資格ステータスを匿名で管理します。当社は、お客様のお支払いの詳細を当社のサーバー上で処理、収集、保存することはありません。
-            </li>
-        </ul>
-        <h2>2. お客様の情報の使用方法</h2>
-        <ul>
-            <li>アプリの機能を提供、維持、改善します。</li>
-            <li>サブスクリプションを管理し、デバイス間でプレミアム コンテンツのロックを正しく解除します。</li>
-        </ul>
-        <h2>3. データ共有</h2>
-        <p>当社はあなたの個人データを販売しません。当社は、必要なインフラストラクチャ サービス (サブスクリプション受領書の確認など) を提供する目的のみを目的として、信頼できるサービス プロバイダー (RevenueCat
-            など) と匿名/集約情報を共有する場合があります。</p>
-        <h2>4. お客様の権利</h2>
-        <p>アカウント登録は必要ないため、デバイスに関連付けられたデータは匿名の識別子にリンクされます。通常、このデータはアプリケーションをアンインストールすることでクリアできます。</p>
-        <h2>5. 本ポリシーの変更</h2>
-        <p>当社は、予告なくいつでも本プライバシー
-            ポリシーを更新または変更する権利を留保します。変更は、アプリ内または当社のウェブサイトに更新されたポリシーを掲載するとすぐに有効になります。変更後もアプリを継続して使用すると、改訂されたプライバシー
-            ポリシーに同意したことになります。</p>
-        <h2>お問い合わせ</h2>
-        <p>弊社のプライバシー ポリシーに関してご質問がある場合は、vincentapp3@gmail.com までご連絡ください。</p>
-    </div>
-    <div class="lang-section" data-lang="zhHans">
-        <h1>隐私政策</h1>
-        <p><strong>生效日期</strong>: 2026-02-28</p>
-        <p>感谢您选择<strong>Tatami Master</strong>（“应用程序”）。我们尊重您的隐私并致力于保护它。本隐私政策解释了我们在收集、使用和披露您的信息方面的做法。</p>
-        <h2>1. 我们收集的信息</h2>
-        <p>该应用程序旨在最大限度地减少个人数据的收集。</p>
-        <ul>
-            <li><strong>使用数据</strong>：我们可能会收集有关您如何与应用程序交互的匿名汇总数据，以改善用户体验。</li>
-            <li><strong>订阅和购买数据</strong>：该应用程序提供通过应用内购买或订阅解锁的优质内容。如果您进行购买或订阅，交易将直接通过 Apple App Store 或 Google Play Store
-                处理。我们使用安全的第三方服务 (RevenueCat) 使用匿名应用程序用户 ID 匿名管理您的权利状态。我们不会在我们的服务器上处理、收集或存储您的付款详细信息。</li>
-        </ul>
-        <h2>2. 我们如何使用您的信息</h2>
-        <ul>
-            <li>提供、维护和改进应用程序的功能。</li>
-            <li>在您的设备上正确管理您的订阅并解锁优质内容。</li>
-        </ul>
-        <h2>3. 数据共享</h2>
-        <p>我们不会出售您的个人数据。我们可能会与受信任的服务提供商（例如 RevenueCat）共享匿名/汇总信息，严格用于提供必要的基础设施服务（例如，验证订阅收据）。</p>
-        <h2>4. 您的权利</h2>
-        <p>由于我们不需要帐户注册，因此与您的设备相关的任何数据都会链接到匿名标识符。您通常可以通过卸载应用程序来清除此数据。</p>
-        <h2>5. 本政策的变更</h2>
-        <p>我们保留随时更新或修改本隐私政策的权利，恕不另行通知。任何更改将在应用程序或我们的网站上发布更新后的政策后立即生效。您在任何修改后继续使用该应用程序即表示您接受修订后的隐私政策。</p>
-        <h2>联系我们</h2>
-        <p>如果您对我们的隐私政策有任何疑问，请通过以下方式联系我们： vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="zhHant">
-        <h1>隱私權政策</h1>
-        <p><strong>生效日期</strong>: 2026-02-28</p>
-        <p>感謝您選擇<strong>Tatami Master</strong>（“應用程式”）。我們尊重您的隱私並致力於保護它。本隱私權政策解釋了我們在收集、使用和揭露您的資訊方面的做法。</p>
-        <h2>1. 我們收集的資訊</h2>
-        <p>該應用程式旨在最大限度地減少個人資料的收集。</p>
-        <ul>
-            <li><strong>使用數據</strong>：我們可能會收集有關您如何與應用程式互動的匿名匯總數據，以改善用戶體驗。</li>
-            <li><strong>訂閱和購買數據</strong>：該應用程式提供透過應用程式內購買或訂閱解鎖的優質內容。如果您進行購買或訂閱，交易將直接透過 Apple App Store 或 Google Play
-                Store 處理。我們使用安全的第三方服務 (RevenueCat) 使用匿名應用程式使用者 ID 匿名管理您的權利狀態。我們不會在我們的伺服器上處理、收集或儲存您的付款詳細資訊。</li>
-        </ul>
-        <h2>2. 我們如何使用您的訊息</h2>
-        <ul>
-            <li>提供、維護和改進應用程式的功能。</li>
-            <li>在您的裝置上正確管理您的訂閱並解鎖優質內容。</li>
-        </ul>
-        <h2>3. 資料共享</h2>
-        <p>我們不會出售您的個人資料。我們可能會與受信任的服務提供者（例如 RevenueCat）共享匿名/匯總信息，嚴格用於提供必要的基礎設施服務（例如，驗證訂閱收據）。</p>
-        <h2>4. 您的權利</h2>
-        <p>由於我們不需要帳戶註冊，因此與您的裝置相關的任何資料都會連結到匿名識別碼。您通常可以透過卸載應用程式來清除此資料。</p>
-        <h2>5. 本政策的變更</h2>
-        <p>我們保留隨時更新或修改本隱私權政策的權利，恕不另行通知。任何變更將在應用程式或我們的網站上發布更新後的政策後立即生效。您在任何修改後繼續使用該應用程式即表示您接受修訂後的隱私權政策。</p>
-        <h2>聯絡我們</h2>
-        <p>如果您對我們的隱私權政策有任何疑問，請透過以下方式與我們聯絡： vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="ko">
+
+<div class="lang-section" data-lang="ko">
         <h1>개인 정보 보호 정책</h1>
         <p><strong>발효일</strong>: 2026-02-28</p>
         <p><strong>Tatami Master</strong>("앱")를 선택해 주셔서 감사합니다. 우리는 귀하의 개인정보를 존중하며 이를 보호하기 위해 최선을 다하고 있습니다. 본 개인정보 보호정책은
@@ -281,162 +300,8 @@
         <h2>문의하기</h2>
         <p>개인 정보 보호 정책에 관해 궁금한 점이 있으면 vincentapp3@gmail.com으로 문의하세요.</p>
     </div>
-    <div class="lang-section" data-lang="id">
-        <h1>Kebijakan Privasi</h1>
-        <p><strong>Tanggal berlaku</strong>: 2026-02-28</p>
-        <p>Terima kasih telah memilih <strong>Tatami Master</strong> ("Aplikasi"). Kami menghormati privasi Anda dan
-            berkomitmen untuk melindunginya. Kebijakan Privasi ini menjelaskan praktik kami mengenai pengumpulan,
-            penggunaan, dan pengungkapan informasi Anda.</p>
-        <h2>1. Informasi yang Kami Kumpulkan</h2>
-        <p>Aplikasi ini dirancang untuk meminimalkan pengumpulan data pribadi.</p>
-        <ul>
-            <li><strong>Data Penggunaan</strong>: Kami dapat mengumpulkan data agregat anonim tentang cara Anda
-                berinteraksi dengan Aplikasi untuk meningkatkan pengalaman pengguna.</li>
-            <li><strong>Data Langganan dan Pembelian</strong>: Aplikasi ini menawarkan konten premium yang dibuka
-                melalui pembelian dalam aplikasi atau langganan. Jika Anda melakukan pembelian atau berlangganan,
-                transaksi diproses langsung melalui Apple App Store atau Google Play Store. Kami menggunakan layanan
-                pihak ketiga yang aman (RevenueCat) untuk mengelola status hak Anda secara anonim menggunakan ID
-                Pengguna Aplikasi anonim. Kami tidak memproses, mengumpulkan, atau menyimpan rincian pembayaran Anda di
-                server kami.</li>
-        </ul>
-        <h2>2. Bagaimana Kami Menggunakan Informasi Anda</h2>
-        <ul>
-            <li>Menyediakan, memelihara, dan meningkatkan fungsi Aplikasi.</li>
-            <li>Kelola langganan Anda dan buka konten premium dengan benar di seluruh perangkat Anda.</li>
-        </ul>
-        <h2>3. Berbagi Data</h2>
-        <p>Kami tidak menjual data pribadi Anda. Kami dapat membagikan informasi anonim/agregat dengan penyedia layanan
-            tepercaya (seperti RevenueCat) hanya untuk menyediakan layanan infrastruktur yang diperlukan (misalnya,
-            memverifikasi tanda terima langganan).</p>
-        <h2>4. Hak Anda</h2>
-        <p>Karena kami tidak memerlukan pendaftaran akun, data apa pun yang terkait dengan perangkat Anda ditautkan ke
-            pengidentifikasi anonim. Anda biasanya dapat menghapus data ini dengan mencopot pemasangan aplikasi.</p>
-        <h2>5. Perubahan Kebijakan Ini</h2>
-        <p>Kami berhak memperbarui atau mengubah Kebijakan Privasi ini kapan saja tanpa pemberitahuan sebelumnya. Setiap
-            perubahan akan berlaku segera setelah kebijakan terbaru diposting di Aplikasi atau di situs web kami. Jika
-            Anda terus menggunakan Aplikasi setelah modifikasi apa pun, Anda menerima Kebijakan Privasi yang telah
-            direvisi.</p>
-        <h2>Hubungi kami</h2>
-        <p>Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi kami, silakan hubungi kami di: vincentapp3@gmail.com
-        </p>
-    </div>
-    <div class="lang-section" data-lang="vi">
-        <h1>Chính sách bảo mật</h1>
-        <p><strong>Ngày có hiệu lực</strong>: 2026-02-28</p>
-        <p>Cảm ơn bạn đã chọn <strong>Tatami Master</strong> ("Ứng dụng"). Chúng tôi tôn trọng quyền riêng tư của bạn và
-            cam kết bảo vệ nó. Chính sách quyền riêng tư này giải thích các thông lệ của chúng tôi về việc thu thập, sử
-            dụng và tiết lộ thông tin của bạn.</p>
-        <h2>1. Thông tin chúng tôi thu thập</h2>
-        <p>Ứng dụng được thiết kế để giảm thiểu việc thu thập dữ liệu cá nhân.</p>
-        <ul>
-            <li><strong>Dữ liệu sử dụng</strong>: Chúng tôi có thể thu thập dữ liệu tổng hợp, ẩn danh về cách bạn tương
-                tác với Ứng dụng để cải thiện trải nghiệm người dùng.</li>
-            <li><strong>Dữ liệu đăng ký và mua hàng</strong>: Ứng dụng cung cấp nội dung cao cấp được mở khóa thông qua
-                mua hàng hoặc đăng ký trong ứng dụng. Nếu bạn mua hàng hoặc đăng ký, giao dịch sẽ được xử lý trực tiếp
-                thông qua Apple App Store hoặc Google Play Store. Chúng tôi sử dụng dịch vụ bảo mật của bên thứ ba
-                (RevenueCat) để quản lý trạng thái quyền lợi của bạn một cách ẩn danh bằng cách sử dụng ID người dùng
-                ứng dụng ẩn danh. Chúng tôi không xử lý, thu thập hoặc lưu trữ chi tiết thanh toán của bạn trên máy chủ
-                của chúng tôi.</li>
-        </ul>
-        <h2>2. Cách chúng tôi sử dụng thông tin của bạn</h2>
-        <ul>
-            <li>Cung cấp, duy trì và cải thiện các chức năng của Ứng dụng.</li>
-            <li>Quản lý đăng ký của bạn và mở khóa nội dung cao cấp một cách chính xác trên các thiết bị của bạn.</li>
-        </ul>
-        <h2>3. Chia sẻ dữ liệu</h2>
-        <p>Chúng tôi không bán dữ liệu cá nhân của bạn. Chúng tôi có thể chia sẻ thông tin ẩn danh/tổng ​​hợp với các
-            nhà cung cấp dịch vụ đáng tin cậy (chẳng hạn như RevenueCat) để cung cấp các dịch vụ cơ sở hạ tầng cần thiết
-            (ví dụ: xác minh biên lai đăng ký).</p>
-        <h2>4. Quyền của bạn</h2>
-        <p>Vì chúng tôi không yêu cầu đăng ký tài khoản nên mọi dữ liệu liên quan đến thiết bị của bạn đều được liên kết
-            với số nhận dạng ẩn danh. Thông thường, bạn có thể xóa dữ liệu này bằng cách gỡ cài đặt ứng dụng.</p>
-        <h2>5. Những thay đổi đối với Chính sách này</h2>
-        <p>Chúng tôi có quyền cập nhật hoặc sửa đổi Chính sách quyền riêng tư này bất cứ lúc nào mà không cần thông báo
-            trước. Mọi thay đổi sẽ có hiệu lực ngay lập tức khi đăng chính sách cập nhật trong Ứng dụng hoặc trên trang
-            web của chúng tôi. Việc bạn tiếp tục sử dụng Ứng dụng sau bất kỳ sửa đổi nào đồng nghĩa với việc bạn chấp
-            nhận Chính sách quyền riêng tư đã sửa đổi.</p>
-        <h2>Liên hệ với chúng tôi</h2>
-        <p>Nếu bạn có bất kỳ câu hỏi nào liên quan đến Chính sách quyền riêng tư của chúng tôi, vui lòng liên hệ với
-            chúng tôi theo địa chỉ: vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="th">
-        <h1>นโยบายความเป็นส่วนตัว</h1>
-        <p><strong>วันที่มีผลบังคับใช้</strong>: 2026-02-28</p>
-        <p>ขอขอบคุณที่เลือก <strong>Tatami Master</strong> ("แอป")
-            เราเคารพความเป็นส่วนตัวของคุณและมุ่งมั่นที่จะปกป้องมัน
-            นโยบายความเป็นส่วนตัวนี้อธิบายหลักปฏิบัติของเราเกี่ยวกับการรวบรวม การใช้ และการเปิดเผยข้อมูลของคุณ</p>
-        <h2>1. ข้อมูลที่เรารวบรวม</h2>
-        <p>แอปนี้ได้รับการออกแบบมาเพื่อลดการรวบรวมข้อมูลส่วนบุคคลให้เหลือน้อยที่สุด</p>
-        <ul>
-            <li><strong>ข้อมูลการใช้งาน</strong>:
-                เราอาจรวบรวมข้อมูลโดยรวมที่ไม่เปิดเผยตัวตนเกี่ยวกับวิธีการที่คุณโต้ตอบกับแอปเพื่อปรับปรุงประสบการณ์ผู้ใช้
-            </li>
-            <li><strong>ข้อมูลการสมัครสมาชิกและการซื้อ</strong>:
-                แอปนำเสนอเนื้อหาระดับพรีเมียมที่ปลดล็อคผ่านการซื้อในแอปหรือการสมัครสมาชิก หากคุณทำการซื้อหรือสมัครสมาชิก
-                ธุรกรรมจะถูกประมวลผลโดยตรงผ่าน Apple App Store หรือ Google Play Store
-                เราใช้บริการของบุคคลที่สามที่ปลอดภัย (RevenueCat) เพื่อจัดการสถานะการให้สิทธิ์ของคุณโดยไม่ระบุชื่อโดยใช้
-                ID ผู้ใช้แอปที่ไม่ระบุชื่อ เราไม่ประมวลผล รวบรวม
-                หรือจัดเก็บรายละเอียดการชำระเงินของคุณบนเซิร์ฟเวอร์ของเรา</li>
-        </ul>
-        <h2>2. เราใช้ข้อมูลของคุณอย่างไร</h2>
-        <ul>
-            <li>จัดเตรียม บำรุงรักษา และปรับปรุงฟังก์ชันการทำงานของแอป</li>
-            <li>จัดการการสมัครของคุณและปลดล็อคเนื้อหาพรีเมี่ยมอย่างถูกต้องในอุปกรณ์ของคุณ</li>
-        </ul>
-        <h2>3. การแบ่งปันข้อมูล</h2>
-        <p>เราไม่ขายข้อมูลส่วนบุคคลของคุณ เราอาจแบ่งปันข้อมูลที่ไม่เปิดเผยตัวตน/ข้อมูลรวมกับผู้ให้บริการที่เชื่อถือได้
-            (เช่น RevenueCat) อย่างเคร่งครัดเพื่อการให้บริการโครงสร้างพื้นฐานที่จำเป็น (เช่น
-            การตรวจสอบใบเสร็จรับเงินการสมัครสมาชิก)</p>
-        <h2>4. สิทธิ์ของคุณ</h2>
-        <p>เนื่องจากเราไม่ต้องการการลงทะเบียนบัญชี ข้อมูลใด ๆ
-            ที่เกี่ยวข้องกับอุปกรณ์ของคุณจึงเชื่อมโยงกับตัวระบุที่ไม่ระบุตัวตน
-            โดยทั่วไปคุณสามารถล้างข้อมูลนี้ได้โดยการถอนการติดตั้งแอปพลิเคชัน</p>
-        <h2>5. การเปลี่ยนแปลงนโยบายนี้</h2>
-        <p>เราขอสงวนสิทธิ์ในการปรับปรุงหรือแก้ไขนโยบายความเป็นส่วนตัวนี้ได้ตลอดเวลาโดยไม่ต้องแจ้งให้ทราบล่วงหน้า
-            การเปลี่ยนแปลงใด ๆ จะมีผลทันทีเมื่อโพสต์นโยบายที่อัปเดตภายในแอปหรือบนเว็บไซต์ของเรา
-            การใช้แอปต่อไปของคุณหลังจากการแก้ไขใด ๆ ถือว่าคุณยอมรับนโยบายความเป็นส่วนตัวที่แก้ไขแล้ว</p>
-        <h2>ติดต่อเรา</h2>
-        <p>หากคุณมีคำถามใด ๆ เกี่ยวกับนโยบายความเป็นส่วนตัวของเรา โปรดติดต่อเราที่: vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="pt">
-        <h1>política de Privacidade</h1>
-        <p><strong>Data Efetiva</strong>: 2026-02-28</p>
-        <p>Obrigado por escolher <strong>Tatami Master</strong> ("o aplicativo"). Respeitamos sua privacidade e estamos
-            comprometidos em protegê-la. Esta Política de Privacidade explica nossas práticas em relação à coleta, uso e
-            divulgação de suas informações.</p>
-        <h2>1. Informações que coletamos</h2>
-        <p>O App foi projetado para minimizar a coleta de dados pessoais.</p>
-        <ul>
-            <li><strong>Dados de uso</strong>: podemos coletar dados anônimos e agregados sobre como você interage com o
-                Aplicativo para melhorar a experiência do usuário.</li>
-            <li><strong>Dados de assinatura e compra</strong>: o aplicativo oferece conteúdo premium desbloqueado por
-                meio de compras ou assinaturas no aplicativo. Se você fizer uma compra ou assinar, a transação será
-                processada diretamente pela Apple App Store ou Google Play Store. Usamos um serviço seguro de terceiros
-                (RevenueCat) para gerenciar seu status de direito anonimamente usando um ID de usuário de aplicativo
-                anônimo. Não processamos, coletamos ou armazenamos seus dados de pagamento em nossos servidores.</li>
-        </ul>
-        <h2>2. Como usamos suas informações</h2>
-        <ul>
-            <li>Fornecer, manter e melhorar as funcionalidades do App.</li>
-            <li>Gerencie suas assinaturas e desbloqueie conteúdo premium corretamente em seus dispositivos.</li>
-        </ul>
-        <h2>3. Compartilhamento de dados</h2>
-        <p>Não vendemos os seus dados pessoais. Podemos compartilhar informações anônimas/agregadas com provedores de
-            serviços confiáveis ​​(como RevenueCat) estritamente para fornecer serviços de infraestrutura necessários
-            (por exemplo, verificação de recibos de assinatura).</p>
-        <h2>4. Seus direitos</h2>
-        <p>Como não exigimos registro de conta, quaisquer dados associados ao seu dispositivo serão vinculados a um
-            identificador anônimo. Normalmente, você pode limpar esses dados desinstalando o aplicativo.</p>
-        <h2>5. Mudanças nesta Política</h2>
-        <p>Reservamo-nos o direito de atualizar ou modificar esta Política de Privacidade a qualquer momento sem aviso
-            prévio. Quaisquer alterações entrarão em vigor imediatamente após a publicação da política atualizada no
-            Aplicativo ou em nosso site. O uso continuado do Aplicativo após quaisquer modificações constitui sua
-            aceitação da Política de Privacidade revisada.</p>
-        <h2>Contate-nos</h2>
-        <p>Se você tiver alguma dúvida sobre nossa Política de Privacidade, entre em contato conosco:
-            vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="es">
+
+<div class="lang-section" data-lang="es">
         <h1>política de privacidad</h1>
         <p><strong>Fecha de vigencia</strong>: 2026-02-28</p>
         <p>Gracias por elegir <strong>Tatami Master</strong> ("la aplicación"). Respetamos su privacidad y nos
@@ -475,7 +340,49 @@
         <h2>Contáctenos</h2>
         <p>Si tiene alguna pregunta sobre nuestra Política de Privacidad, contáctenos en: vincentapp3@gmail.com</p>
     </div>
-    <div class="lang-section" data-lang="de">
+
+<div class="lang-section" data-lang="fr">
+        <h1>politique de confidentialité</h1>
+        <p><strong>Date d'entrée en vigueur</strong>: 2026-02-28</p>
+        <p>Merci d'avoir choisi <strong>Tatami Master</strong> (« l'application »). Nous respectons votre vie privée et
+            nous engageons à la protéger. Cette politique de confidentialité explique nos pratiques concernant la
+            collecte, l'utilisation et la divulgation de vos informations.</p>
+        <h2>1. Informations que nous collectons</h2>
+        <p>L'application est conçue pour minimiser la collecte de données personnelles.</p>
+        <ul>
+            <li><strong>Données d'utilisation</strong> : nous pouvons collecter des données anonymes et agrégées sur la
+                façon dont vous interagissez avec l'application afin d'améliorer l'expérience utilisateur.</li>
+            <li><strong>Données d'abonnement et d'achat</strong> : l'application propose du contenu premium débloqué via
+                des achats ou des abonnements intégrés. Si vous effectuez un achat ou vous abonnez, la transaction est
+                traitée directement via l'Apple App Store ou le Google Play Store. Nous utilisons un service tiers
+                sécurisé (RevenueCat) pour gérer votre statut d'admissibilité de manière anonyme à l'aide d'un
+                identifiant d'utilisateur d'application anonyme. Nous ne traitons pas, ne collectons pas et ne stockons
+                pas vos informations de paiement sur nos serveurs.</li>
+        </ul>
+        <h2>2. Comment nous utilisons vos informations</h2>
+        <ul>
+            <li>Fournir, maintenir et améliorer les fonctionnalités de l'application.</li>
+            <li>Gérez vos abonnements et débloquez correctement le contenu premium sur vos appareils.</li>
+        </ul>
+        <h2>3. Partage de données</h2>
+        <p>Nous ne vendons pas vos données personnelles. Nous pouvons partager des informations anonymes/agrégées avec
+            des fournisseurs de services de confiance (tels que RevenueCat) uniquement pour fournir les services
+            d'infrastructure nécessaires (par exemple, vérifier les reçus d'abonnement).</p>
+        <h2>4. Vos droits</h2>
+        <p>Étant donné que nous n'exigeons pas l'enregistrement d'un compte, toutes les données associées à votre
+            appareil sont liées à un identifiant anonyme. Vous pouvez généralement effacer ces données en désinstallant
+            l'application.</p>
+        <h2>5. Modifications de cette politique</h2>
+        <p>Nous nous réservons le droit de mettre à jour ou de modifier cette politique de confidentialité à tout moment
+            et sans préavis. Toute modification entrera en vigueur immédiatement après la publication de la politique
+            mise à jour dans l'application ou sur notre site Web. Votre utilisation continue de l'application après
+            toute modification constitue votre acceptation de la politique de confidentialité révisée.</p>
+        <h2>Contactez-nous</h2>
+        <p>Si vous avez des questions concernant notre politique de confidentialité, veuillez nous contacter à :
+            vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="de">
         <h1>Datenschutzrichtlinie</h1>
         <p><strong>Datum des Inkrafttretens</strong>: 2026-02-28</p>
         <p>Vielen Dank, dass Sie sich für <strong>Tatami Master</strong> („die App“) entschieden haben. Wir respektieren
@@ -514,47 +421,8 @@
         <p>Wenn Sie Fragen zu unserer Datenschutzrichtlinie haben, kontaktieren Sie uns bitte unter:
             vincentapp3@gmail.com</p>
     </div>
-    <div class="lang-section" data-lang="fr">
-        <h1>politique de confidentialité</h1>
-        <p><strong>Date d'entrée en vigueur</strong>: 2026-02-28</p>
-        <p>Merci d'avoir choisi <strong>Tatami Master</strong> (« l'application »). Nous respectons votre vie privée et
-            nous engageons à la protéger. Cette politique de confidentialité explique nos pratiques concernant la
-            collecte, l'utilisation et la divulgation de vos informations.</p>
-        <h2>1. Informations que nous collectons</h2>
-        <p>L'application est conçue pour minimiser la collecte de données personnelles.</p>
-        <ul>
-            <li><strong>Données d'utilisation</strong> : nous pouvons collecter des données anonymes et agrégées sur la
-                façon dont vous interagissez avec l'application afin d'améliorer l'expérience utilisateur.</li>
-            <li><strong>Données d'abonnement et d'achat</strong> : l'application propose du contenu premium débloqué via
-                des achats ou des abonnements intégrés. Si vous effectuez un achat ou vous abonnez, la transaction est
-                traitée directement via l'Apple App Store ou le Google Play Store. Nous utilisons un service tiers
-                sécurisé (RevenueCat) pour gérer votre statut d'admissibilité de manière anonyme à l'aide d'un
-                identifiant d'utilisateur d'application anonyme. Nous ne traitons pas, ne collectons pas et ne stockons
-                pas vos informations de paiement sur nos serveurs.</li>
-        </ul>
-        <h2>2. Comment nous utilisons vos informations</h2>
-        <ul>
-            <li>Fournir, maintenir et améliorer les fonctionnalités de l'application.</li>
-            <li>Gérez vos abonnements et débloquez correctement le contenu premium sur vos appareils.</li>
-        </ul>
-        <h2>3. Partage de données</h2>
-        <p>Nous ne vendons pas vos données personnelles. Nous pouvons partager des informations anonymes/agrégées avec
-            des fournisseurs de services de confiance (tels que RevenueCat) uniquement pour fournir les services
-            d'infrastructure nécessaires (par exemple, vérifier les reçus d'abonnement).</p>
-        <h2>4. Vos droits</h2>
-        <p>Étant donné que nous n'exigeons pas l'enregistrement d'un compte, toutes les données associées à votre
-            appareil sont liées à un identifiant anonyme. Vous pouvez généralement effacer ces données en désinstallant
-            l'application.</p>
-        <h2>5. Modifications de cette politique</h2>
-        <p>Nous nous réservons le droit de mettre à jour ou de modifier cette politique de confidentialité à tout moment
-            et sans préavis. Toute modification entrera en vigueur immédiatement après la publication de la politique
-            mise à jour dans l'application ou sur notre site Web. Votre utilisation continue de l'application après
-            toute modification constitue votre acceptation de la politique de confidentialité révisée.</p>
-        <h2>Contactez-nous</h2>
-        <p>Si vous avez des questions concernant notre politique de confidentialité, veuillez nous contacter à :
-            vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="it">
+
+<div class="lang-section" data-lang="it">
         <h1>politica sulla riservatezza</h1>
         <p><strong>Data di entrata in vigore</strong>: 2026-02-28</p>
         <p>Grazie per aver scelto <strong>Tatami Master</strong> ("l'App"). Rispettiamo la tua privacy e ci impegniamo a
@@ -594,22 +462,183 @@
         <p>In caso di domande relative alla nostra Informativa sulla privacy, contattaci all'indirizzo:
             vincentapp3@gmail.com</p>
     </div>
+
+<div class="lang-section" data-lang="pt">
+        <h1>política de Privacidade</h1>
+        <p><strong>Data Efetiva</strong>: 2026-02-28</p>
+        <p>Obrigado por escolher <strong>Tatami Master</strong> ("o aplicativo"). Respeitamos sua privacidade e estamos
+            comprometidos em protegê-la. Esta Política de Privacidade explica nossas práticas em relação à coleta, uso e
+            divulgação de suas informações.</p>
+        <h2>1. Informações que coletamos</h2>
+        <p>O App foi projetado para minimizar a coleta de dados pessoais.</p>
+        <ul>
+            <li><strong>Dados de uso</strong>: podemos coletar dados anônimos e agregados sobre como você interage com o
+                Aplicativo para melhorar a experiência do usuário.</li>
+            <li><strong>Dados de assinatura e compra</strong>: o aplicativo oferece conteúdo premium desbloqueado por
+                meio de compras ou assinaturas no aplicativo. Se você fizer uma compra ou assinar, a transação será
+                processada diretamente pela Apple App Store ou Google Play Store. Usamos um serviço seguro de terceiros
+                (RevenueCat) para gerenciar seu status de direito anonimamente usando um ID de usuário de aplicativo
+                anônimo. Não processamos, coletamos ou armazenamos seus dados de pagamento em nossos servidores.</li>
+        </ul>
+        <h2>2. Como usamos suas informações</h2>
+        <ul>
+            <li>Fornecer, manter e melhorar as funcionalidades do App.</li>
+            <li>Gerencie suas assinaturas e desbloqueie conteúdo premium corretamente em seus dispositivos.</li>
+        </ul>
+        <h2>3. Compartilhamento de dados</h2>
+        <p>Não vendemos os seus dados pessoais. Podemos compartilhar informações anônimas/agregadas com provedores de
+            serviços confiáveis ​​(como RevenueCat) estritamente para fornecer serviços de infraestrutura necessários
+            (por exemplo, verificação de recibos de assinatura).</p>
+        <h2>4. Seus direitos</h2>
+        <p>Como não exigimos registro de conta, quaisquer dados associados ao seu dispositivo serão vinculados a um
+            identificador anônimo. Normalmente, você pode limpar esses dados desinstalando o aplicativo.</p>
+        <h2>5. Mudanças nesta Política</h2>
+        <p>Reservamo-nos o direito de atualizar ou modificar esta Política de Privacidade a qualquer momento sem aviso
+            prévio. Quaisquer alterações entrarão em vigor imediatamente após a publicação da política atualizada no
+            Aplicativo ou em nosso site. O uso continuado do Aplicativo após quaisquer modificações constitui sua
+            aceitação da Política de Privacidade revisada.</p>
+        <h2>Contate-nos</h2>
+        <p>Se você tiver alguma dúvida sobre nossa Política de Privacidade, entre em contato conosco:
+            vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="id">
+        <h1>Kebijakan Privasi</h1>
+        <p><strong>Tanggal berlaku</strong>: 2026-02-28</p>
+        <p>Terima kasih telah memilih <strong>Tatami Master</strong> ("Aplikasi"). Kami menghormati privasi Anda dan
+            berkomitmen untuk melindunginya. Kebijakan Privasi ini menjelaskan praktik kami mengenai pengumpulan,
+            penggunaan, dan pengungkapan informasi Anda.</p>
+        <h2>1. Informasi yang Kami Kumpulkan</h2>
+        <p>Aplikasi ini dirancang untuk meminimalkan pengumpulan data pribadi.</p>
+        <ul>
+            <li><strong>Data Penggunaan</strong>: Kami dapat mengumpulkan data agregat anonim tentang cara Anda
+                berinteraksi dengan Aplikasi untuk meningkatkan pengalaman pengguna.</li>
+            <li><strong>Data Langganan dan Pembelian</strong>: Aplikasi ini menawarkan konten premium yang dibuka
+                melalui pembelian dalam aplikasi atau langganan. Jika Anda melakukan pembelian atau berlangganan,
+                transaksi diproses langsung melalui Apple App Store atau Google Play Store. Kami menggunakan layanan
+                pihak ketiga yang aman (RevenueCat) untuk mengelola status hak Anda secara anonim menggunakan ID
+                Pengguna Aplikasi anonim. Kami tidak memproses, mengumpulkan, atau menyimpan rincian pembayaran Anda di
+                server kami.</li>
+        </ul>
+        <h2>2. Bagaimana Kami Menggunakan Informasi Anda</h2>
+        <ul>
+            <li>Menyediakan, memelihara, dan meningkatkan fungsi Aplikasi.</li>
+            <li>Kelola langganan Anda dan buka konten premium dengan benar di seluruh perangkat Anda.</li>
+        </ul>
+        <h2>3. Berbagi Data</h2>
+        <p>Kami tidak menjual data pribadi Anda. Kami dapat membagikan informasi anonim/agregat dengan penyedia layanan
+            tepercaya (seperti RevenueCat) hanya untuk menyediakan layanan infrastruktur yang diperlukan (misalnya,
+            memverifikasi tanda terima langganan).</p>
+        <h2>4. Hak Anda</h2>
+        <p>Karena kami tidak memerlukan pendaftaran akun, data apa pun yang terkait dengan perangkat Anda ditautkan ke
+            pengidentifikasi anonim. Anda biasanya dapat menghapus data ini dengan mencopot pemasangan aplikasi.</p>
+        <h2>5. Perubahan Kebijakan Ini</h2>
+        <p>Kami berhak memperbarui atau mengubah Kebijakan Privasi ini kapan saja tanpa pemberitahuan sebelumnya. Setiap
+            perubahan akan berlaku segera setelah kebijakan terbaru diposting di Aplikasi atau di situs web kami. Jika
+            Anda terus menggunakan Aplikasi setelah modifikasi apa pun, Anda menerima Kebijakan Privasi yang telah
+            direvisi.</p>
+        <h2>Hubungi kami</h2>
+        <p>Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi kami, silakan hubungi kami di: vincentapp3@gmail.com
+        </p>
+    </div>
+
+<div class="lang-section" data-lang="vi">
+        <h1>Chính sách bảo mật</h1>
+        <p><strong>Ngày có hiệu lực</strong>: 2026-02-28</p>
+        <p>Cảm ơn bạn đã chọn <strong>Tatami Master</strong> ("Ứng dụng"). Chúng tôi tôn trọng quyền riêng tư của bạn và
+            cam kết bảo vệ nó. Chính sách quyền riêng tư này giải thích các thông lệ của chúng tôi về việc thu thập, sử
+            dụng và tiết lộ thông tin của bạn.</p>
+        <h2>1. Thông tin chúng tôi thu thập</h2>
+        <p>Ứng dụng được thiết kế để giảm thiểu việc thu thập dữ liệu cá nhân.</p>
+        <ul>
+            <li><strong>Dữ liệu sử dụng</strong>: Chúng tôi có thể thu thập dữ liệu tổng hợp, ẩn danh về cách bạn tương
+                tác với Ứng dụng để cải thiện trải nghiệm người dùng.</li>
+            <li><strong>Dữ liệu đăng ký và mua hàng</strong>: Ứng dụng cung cấp nội dung cao cấp được mở khóa thông qua
+                mua hàng hoặc đăng ký trong ứng dụng. Nếu bạn mua hàng hoặc đăng ký, giao dịch sẽ được xử lý trực tiếp
+                thông qua Apple App Store hoặc Google Play Store. Chúng tôi sử dụng dịch vụ bảo mật của bên thứ ba
+                (RevenueCat) để quản lý trạng thái quyền lợi của bạn một cách ẩn danh bằng cách sử dụng ID người dùng
+                ứng dụng ẩn danh. Chúng tôi không xử lý, thu thập hoặc lưu trữ chi tiết thanh toán của bạn trên máy chủ
+                của chúng tôi.</li>
+        </ul>
+        <h2>2. Cách chúng tôi sử dụng thông tin của bạn</h2>
+        <ul>
+            <li>Cung cấp, duy trì và cải thiện các chức năng của Ứng dụng.</li>
+            <li>Quản lý đăng ký của bạn và mở khóa nội dung cao cấp một cách chính xác trên các thiết bị của bạn.</li>
+        </ul>
+        <h2>3. Chia sẻ dữ liệu</h2>
+        <p>Chúng tôi không bán dữ liệu cá nhân của bạn. Chúng tôi có thể chia sẻ thông tin ẩn danh/tổng ​​hợp với các
+            nhà cung cấp dịch vụ đáng tin cậy (chẳng hạn như RevenueCat) để cung cấp các dịch vụ cơ sở hạ tầng cần thiết
+            (ví dụ: xác minh biên lai đăng ký).</p>
+        <h2>4. Quyền của bạn</h2>
+        <p>Vì chúng tôi không yêu cầu đăng ký tài khoản nên mọi dữ liệu liên quan đến thiết bị của bạn đều được liên kết
+            với số nhận dạng ẩn danh. Thông thường, bạn có thể xóa dữ liệu này bằng cách gỡ cài đặt ứng dụng.</p>
+        <h2>5. Những thay đổi đối với Chính sách này</h2>
+        <p>Chúng tôi có quyền cập nhật hoặc sửa đổi Chính sách quyền riêng tư này bất cứ lúc nào mà không cần thông báo
+            trước. Mọi thay đổi sẽ có hiệu lực ngay lập tức khi đăng chính sách cập nhật trong Ứng dụng hoặc trên trang
+            web của chúng tôi. Việc bạn tiếp tục sử dụng Ứng dụng sau bất kỳ sửa đổi nào đồng nghĩa với việc bạn chấp
+            nhận Chính sách quyền riêng tư đã sửa đổi.</p>
+        <h2>Liên hệ với chúng tôi</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi nào liên quan đến Chính sách quyền riêng tư của chúng tôi, vui lòng liên hệ với
+            chúng tôi theo địa chỉ: vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="th">
+        <h1>นโยบายความเป็นส่วนตัว</h1>
+        <p><strong>วันที่มีผลบังคับใช้</strong>: 2026-02-28</p>
+        <p>ขอขอบคุณที่เลือก <strong>Tatami Master</strong> ("แอป")
+            เราเคารพความเป็นส่วนตัวของคุณและมุ่งมั่นที่จะปกป้องมัน
+            นโยบายความเป็นส่วนตัวนี้อธิบายหลักปฏิบัติของเราเกี่ยวกับการรวบรวม การใช้ และการเปิดเผยข้อมูลของคุณ</p>
+        <h2>1. ข้อมูลที่เรารวบรวม</h2>
+        <p>แอปนี้ได้รับการออกแบบมาเพื่อลดการรวบรวมข้อมูลส่วนบุคคลให้เหลือน้อยที่สุด</p>
+        <ul>
+            <li><strong>ข้อมูลการใช้งาน</strong>:
+                เราอาจรวบรวมข้อมูลโดยรวมที่ไม่เปิดเผยตัวตนเกี่ยวกับวิธีการที่คุณโต้ตอบกับแอปเพื่อปรับปรุงประสบการณ์ผู้ใช้
+            </li>
+            <li><strong>ข้อมูลการสมัครสมาชิกและการซื้อ</strong>:
+                แอปนำเสนอเนื้อหาระดับพรีเมียมที่ปลดล็อคผ่านการซื้อในแอปหรือการสมัครสมาชิก หากคุณทำการซื้อหรือสมัครสมาชิก
+                ธุรกรรมจะถูกประมวลผลโดยตรงผ่าน Apple App Store หรือ Google Play Store
+                เราใช้บริการของบุคคลที่สามที่ปลอดภัย (RevenueCat) เพื่อจัดการสถานะการให้สิทธิ์ของคุณโดยไม่ระบุชื่อโดยใช้
+                ID ผู้ใช้แอปที่ไม่ระบุชื่อ เราไม่ประมวลผล รวบรวม
+                หรือจัดเก็บรายละเอียดการชำระเงินของคุณบนเซิร์ฟเวอร์ของเรา</li>
+        </ul>
+        <h2>2. เราใช้ข้อมูลของคุณอย่างไร</h2>
+        <ul>
+            <li>จัดเตรียม บำรุงรักษา และปรับปรุงฟังก์ชันการทำงานของแอป</li>
+            <li>จัดการการสมัครของคุณและปลดล็อคเนื้อหาพรีเมี่ยมอย่างถูกต้องในอุปกรณ์ของคุณ</li>
+        </ul>
+        <h2>3. การแบ่งปันข้อมูล</h2>
+        <p>เราไม่ขายข้อมูลส่วนบุคคลของคุณ เราอาจแบ่งปันข้อมูลที่ไม่เปิดเผยตัวตน/ข้อมูลรวมกับผู้ให้บริการที่เชื่อถือได้
+            (เช่น RevenueCat) อย่างเคร่งครัดเพื่อการให้บริการโครงสร้างพื้นฐานที่จำเป็น (เช่น
+            การตรวจสอบใบเสร็จรับเงินการสมัครสมาชิก)</p>
+        <h2>4. สิทธิ์ของคุณ</h2>
+        <p>เนื่องจากเราไม่ต้องการการลงทะเบียนบัญชี ข้อมูลใด ๆ
+            ที่เกี่ยวข้องกับอุปกรณ์ของคุณจึงเชื่อมโยงกับตัวระบุที่ไม่ระบุตัวตน
+            โดยทั่วไปคุณสามารถล้างข้อมูลนี้ได้โดยการถอนการติดตั้งแอปพลิเคชัน</p>
+        <h2>5. การเปลี่ยนแปลงนโยบายนี้</h2>
+        <p>เราขอสงวนสิทธิ์ในการปรับปรุงหรือแก้ไขนโยบายความเป็นส่วนตัวนี้ได้ตลอดเวลาโดยไม่ต้องแจ้งให้ทราบล่วงหน้า
+            การเปลี่ยนแปลงใด ๆ จะมีผลทันทีเมื่อโพสต์นโยบายที่อัปเดตภายในแอปหรือบนเว็บไซต์ของเรา
+            การใช้แอปต่อไปของคุณหลังจากการแก้ไขใด ๆ ถือว่าคุณยอมรับนโยบายความเป็นส่วนตัวที่แก้ไขแล้ว</p>
+        <h2>ติดต่อเรา</h2>
+        <p>หากคุณมีคำถามใด ๆ เกี่ยวกับนโยบายความเป็นส่วนตัวของเรา โปรดติดต่อเราที่: vincentapp3@gmail.com</p>
+    </div>
+
     <script>
         const LANG_MAP = {
-            'en': 'English',
-            'ja': '\u65E5\u672C\u8A9E', // 日本語
             'zhHans': '\u7B80\u4F53\u4E2D\u6587', // 简体中文
             'zhHant': '\u7E41\u9AD4\u4E2D\u6587', // 繁體中文
+            'ja': '\u65E5\u672C\u8A9E', // 日本語
+            'en': 'English',
             'ko': '\uD55C\uAD6D\uC5B4', // 한국어
+            'es': 'Espa\u00F1ol',
+            'fr': 'Fran\u00E7ais',
+            'de': 'Deutsch',
+            'it': 'Italiano',
+            'pt': 'Portugu\u00EAs',
             'id': 'Bahasa Indonesia',
             'vi': 'Ti\u1EBFng Vi\u1EC7t',
-            'th': '\u0E44\u0E17\u0E22',
-            'pt': 'Portugu\u00EAs',
-            'es': 'Espa\u00F1ol',
-            'de': 'Deutsch',
-            'fr': 'Fran\u00E7ais',
-            'it': 'Italiano'
+            'th': '\u0E44\u0E17\u0E22'
         };
+
         function switchLanguage(lang) {
             document.querySelectorAll('.lang-section').forEach(function (el) { el.classList.remove('active'); });
             const activeSection = document.querySelector('.lang-section[data-lang="' + lang + '"]');
@@ -624,6 +653,7 @@
                 // 使用硬编码的 Unicode 转义字符串，绝对避免乱码
                 trigger.innerText = LANG_MAP[lang] || lang;
             }
+
             document.documentElement.lang = lang;
             const url = new URL(window.location);
             url.searchParams.set('lang', lang);
@@ -632,10 +662,11 @@
         window.onload = function () {
             const urlParams = new URLSearchParams(window.location.search);
             let lang = urlParams.get('lang');
-            const supportedLangs = ["en", "ja", "zhHans", "zhHant", "ko", "id", "vi", "th", "pt", "es", "de", "fr", "it"];
+            const supportedLangs = ["zhHans", "zhHant", "ja", "en", "ko", "es", "fr", "de", "it", "pt", "id", "vi", "th"];
             if (!lang || !supportedLangs.includes(lang)) lang = 'en';
             switchLanguage(lang);
         };
     </script>
 </body>
+
 </html>
