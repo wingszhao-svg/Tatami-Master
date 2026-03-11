@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="utf-8">
@@ -19,18 +20,22 @@
             padding: 20px;
             color: #333;
         }
+
         h1,
         h2 {
             color: #2C3E36;
         }
+
         .lang-section {
             display: none;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
         }
+
         .lang-section.active {
             display: block;
         }
+
         .lang-switcher {
             margin-bottom: 20px;
             padding: 12px;
@@ -41,6 +46,7 @@
             justify-content: flex-end;
             gap: 10px;
         }
+
         .lang-switcher label {
             font-size: 14px;
             color: #666;
@@ -49,6 +55,7 @@
             align-items: center;
             gap: 6px;
         }
+
         .lang-switcher {
             display: flex;
             align-items: center;
@@ -62,18 +69,21 @@
             z-index: 100;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
+
         .lang-switcher label {
             font-weight: 600;
             color: #666;
             font-size: 13px;
             white-space: nowrap;
         }
+
         /* 核心修复：通过自定义样式和隐藏原生 select 来解决 iOS 选中项乱码 */
         .select-wrapper {
             position: relative;
             display: inline-block;
             min-width: 120px;
         }
+
         .select-trigger {
             padding: 8px 32px 8px 12px;
             font-size: 14px;
@@ -89,6 +99,7 @@
             pointer-events: none; /* 让点击穿透到下面的 select */
             font-family: system-ui, -apple-system, sans-serif;
         }
+
         .select-trigger::after {
             content: "";
             position: absolute;
@@ -99,6 +110,7 @@
             border-right: 5px solid transparent;
             border-top: 5px solid #2C3E36;
         }
+
         .lang-switcher select {
             position: absolute;
             top: 0;
@@ -112,29 +124,107 @@
         }
     </style>
 </head>
+
 <body>
+
     <div class="lang-switcher">
         <label for="lang-select">Language / 言語 / 语言:</label>
         <div class="select-wrapper">
             <div id="select-trigger" class="select-trigger">English</div>
             <select id="lang-select" onchange="switchLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="ja">日本語</option>
                 <option value="zhHans">简体中文</option>
                 <option value="zhHant">繁體中文</option>
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
                 <option value="ko">한국어</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
                 <option value="id">Bahasa Indonesia</option>
                 <option value="vi">Tiếng Việt</option>
-                <option value="th">ไทย</option>
-                <option value="pt">Português</option>
-                <option value="es">Español</option>
-                <option value="de">Deutsch</option>
-                <option value="fr">Français</option>
-                <option value="it">Italiano</option>
+                <option value="th">ภาษาไทย</option>
             </select>
         </div>
     </div>
-    <div class="lang-section" data-lang="en">
+
+    <div class="lang-section" data-lang="zhHans">
+        <h1>服务条款</h1>
+        <p><strong>生效日期</strong>: 2026-02-28</p>
+        <p>在使用由<strong>Zhao Changqing</strong>（“我们”或“我们的”）运营的<strong>榻榻米大师</strong>应用程序（“应用程序”）之前，请仔细阅读这些服务条款（“条款”）。</p>
+        <h2>1. 订阅和购买</h2>
+        <p>该应用程序提供通过应用内购买或订阅解锁的优质内容。购买订阅即表示您同意以下条款：</p>
+        <ul>
+            <li><strong>付款</strong>：付款将在确认购买时使用关联的付款方式直接通过您的 Apple ID 或 Google Play 帐户进行处理。</li>
+            <li><strong>自动续订</strong>：订阅会自动续订，除非在当前计费周期结束前至少 24 小时关闭或取消自动续订。您的帐户将在当前期限结束前 24 小时内收取续订费用。</li>
+            <li><strong>取消</strong>：您可以在购买后前往您的 App Store 或 Google Play
+                商店帐户设置来管理和取消您的订阅。取消订阅不会立即终止您的高级访问权限；您将继续拥有访问权限，直至当前计费周期结束。</li>
+            <li><strong>恢复购买</strong>：您可以随时使用应用程序订阅或设置页面中的“恢复购买”功能恢复以前的购买。这可确保您在跨设备或重新安装后仍能访问优质内容。</li>
+        </ul>
+        <h2>2. 知识产权</h2>
+        <p>该应用程序及其内容（文本、图形、图像）仍然是我们的专有财产。未经许可，您不得复制或分发内容。</p>
+        <h2>3. 责任限制</h2>
+        <p>共享的结构模式 (Joseki) 和测量仅供参考。对于在实际建筑环境中使用它们而造成的任何损害，我们不承担任何责任。</p>
+        <h2>4. 这些条款的变更</h2>
+        <p>我们保留随时更新或修改这些服务条款的权利，恕不另行通知。任何更改将在应用程序或我们的网站上发布更新后的条款后立即生效。您在任何修改后继续使用该应用程序即表示您接受修订后的条款。</p>
+        <h2>联系我们</h2>
+        <p>如果您在使用应用程序时遇到任何问题，或者对这些条款有任何疑问，请联系我们获取技术支持： vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="zhHant">
+        <h1>服務條款</h1>
+        <p><strong>生效日期</strong>: 2026-02-28</p>
+        <p>在使用由<strong>Zhao Changqing</strong>（“我們”或“我們的”）運營的<strong>榻榻米大師</strong>應用程式（“應用程式”）之前，請仔細閱讀這些服務條款（“條款”）。</p>
+        <h2>1. 訂閱和購買</h2>
+        <p>該應用程式提供透過應用程式內購買或訂閱解鎖的優質內容。購買訂閱即表示您同意以下條款：</p>
+        <ul>
+            <li><strong>付款</strong>：付款將在確認購買時使用關聯的付款方式直接透過您的 Apple ID 或 Google Play 帳戶進行處理。</li>
+            <li><strong>自動續訂</strong>：訂閱會自動續訂，除非在目前計費週期結束前至少 24 小時關閉或取消自動續訂。您的帳戶將在目前期限結束前 24 小時內收取續約費用。</li>
+            <li><strong>取消</strong>：您可以在購買後前往您的 App Store 或 Google Play
+                商店帳戶設定來管理和取消您的訂閱。取消訂閱不會立即終止您的進階存取權限；您將繼續擁有存取權限，直到目前計費週期結束。</li>
+            <li><strong>恢復購買</strong>：您可以隨時使用應用程式訂閱或設定頁面中的「恢復購買」功能來恢復先前的購買。這可確保您在跨裝置或重新安裝後仍能存取優質內容。</li>
+        </ul>
+        <h2>2. 智慧財產權</h2>
+        <p>該應用程式及其內容（文字、圖形、圖像）仍然是我們的專有財產。未經許可，您不得複製或散佈內容。</p>
+        <h2>3. 責任限制</h2>
+        <p>共享的結構模式 (Joseki) 和測量僅供參考。對於在實際建築環境中使用它們而造成的任何損害，我們不承擔任何責任。</p>
+        <h2>4. 這些條款的變更</h2>
+        <p>我們保留隨時更新或修改這些服務條款的權利，恕不另行通知。任何變更將在應用程式或我們的網站上發布更新後的條款後立即生效。您在任何修改後繼續使用該應用程式即表示您接受修訂後的條款。</p>
+        <h2>聯絡我們</h2>
+        <p>如果您在使用應用程式時遇到任何問題，或對這些條款有任何疑問，請聯絡我們以取得技術支援： vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="ja">
+        <h1>利用規約</h1>
+        <p><strong>発効日</strong>: 2026-02-28</p>
+        <p><strong>Zhao Changqing</strong> (「当社」) が運営する <strong>Tatami Master</strong> アプリケーション (「アプリ」) を使用する前に、これらの利用規約
+            (「規約」) をよくお読みください。</p>
+        <h2>1. 定期購入と購入</h2>
+        <p>このアプリは、アプリ内購入またはサブスクリプションを通じてロック解除されたプレミアム コンテンツを提供します。サブスクリプションを購入すると、次の条件に同意したことになります。</p>
+        <ul>
+            <li><strong>お支払い</strong>: 支払いは、購入の確認時に、関連付けられたお支払い方法を使用して、Apple ID または Google Play アカウントを通じて直接処理されます。</li>
+            <li><strong>自動更新</strong>: 現在の請求期間が終了する少なくとも 24 時間前に自動更新がオフになるかキャンセルされない限り、サブスクリプションは自動的に更新されます。現在の期間が終了する
+                24 時間以内に、アカウントに更新料金が請求されます。</li>
+            <li><strong>キャンセル</strong>: 購入後に App Store または Google Play
+                ストアのアカウント設定に移動して、サブスクリプションを管理およびキャンセルできます。サブスクリプションをキャンセルしても、プレミアム
+                アクセスはすぐに終了しません。現在の請求サイクルが終了するまで引き続きアクセスできます。</li>
+            <li><strong>購入の復元</strong>:
+                アプリのサブスクリプションまたは設定ページにある「購入の復元」機能を使用すると、いつでも以前の購入を復元できます。これにより、デバイス間または再インストール後もプレミアム
+                コンテンツへのアクセスが維持されます。</li>
+        </ul>
+        <h2>2. 知的財産</h2>
+        <p>アプリとそのコンテンツ (テキスト、グラフィック、画像) は当社の独占的財産のままです。内容を無断で転載・配布することはできません。</p>
+        <h2>3. 責任の制限</h2>
+        <p>共有される構造パターン (定石) と測定値は情報提供を目的としています。実際の建築用途での使用により生じた損害については、当社は一切の責任を負いません。</p>
+        <h2>4. 本規約の変更</h2>
+        <p>当社は、予告なくいつでも本利用規約を更新または変更する権利を留保します。変更は、アプリ内または当社のウェブサイトに更新された規約を掲載した時点で直ちに有効になります。変更後もアプリを継続して使用すると、改訂された規約に同意したことになります。
+        </p>
+        <h2>お問い合わせ</h2>
+        <p>アプリの使用中に問題が発生した場合、または本規約についてご質問がある場合は、テクニカル サポートについて次のアドレスまでご連絡ください: vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="en">
         <h1>Terms of Service</h1>
         <p><strong>Effective Date</strong>: February 28, 2026</p>
         <p>Please read these Terms of Service ("Terms") carefully before using the <strong>Tatami Master</strong>
@@ -170,79 +260,8 @@
         <p>If you encounter any issues while using the App, or if you have any questions about these Terms, please
             contact us for technical support at: vincentapp3@gmail.com</p>
     </div>
-    <div class="lang-section" data-lang="ja">
-        <h1>利用規約</h1>
-        <p><strong>発効日</strong>: 2026-02-28</p>
-        <p><strong>Zhao Changqing</strong> (「当社」) が運営する <strong>Tatami Master</strong> アプリケーション (「アプリ」) を使用する前に、これらの利用規約
-            (「規約」) をよくお読みください。</p>
-        <h2>1. 定期購入と購入</h2>
-        <p>このアプリは、アプリ内購入またはサブスクリプションを通じてロック解除されたプレミアム コンテンツを提供します。サブスクリプションを購入すると、次の条件に同意したことになります。</p>
-        <ul>
-            <li><strong>お支払い</strong>: 支払いは、購入の確認時に、関連付けられたお支払い方法を使用して、Apple ID または Google Play アカウントを通じて直接処理されます。</li>
-            <li><strong>自動更新</strong>: 現在の請求期間が終了する少なくとも 24 時間前に自動更新がオフになるかキャンセルされない限り、サブスクリプションは自動的に更新されます。現在の期間が終了する
-                24 時間以内に、アカウントに更新料金が請求されます。</li>
-            <li><strong>キャンセル</strong>: 購入後に App Store または Google Play
-                ストアのアカウント設定に移動して、サブスクリプションを管理およびキャンセルできます。サブスクリプションをキャンセルしても、プレミアム
-                アクセスはすぐに終了しません。現在の請求サイクルが終了するまで引き続きアクセスできます。</li>
-            <li><strong>購入の復元</strong>:
-                アプリのサブスクリプションまたは設定ページにある「購入の復元」機能を使用すると、いつでも以前の購入を復元できます。これにより、デバイス間または再インストール後もプレミアム
-                コンテンツへのアクセスが維持されます。</li>
-        </ul>
-        <h2>2. 知的財産</h2>
-        <p>アプリとそのコンテンツ (テキスト、グラフィック、画像) は当社の独占的財産のままです。内容を無断で転載・配布することはできません。</p>
-        <h2>3. 責任の制限</h2>
-        <p>共有される構造パターン (定石) と測定値は情報提供を目的としています。実際の建築用途での使用により生じた損害については、当社は一切の責任を負いません。</p>
-        <h2>4. 本規約の変更</h2>
-        <p>当社は、予告なくいつでも本利用規約を更新または変更する権利を留保します。変更は、アプリ内または当社のウェブサイトに更新された規約を掲載した時点で直ちに有効になります。変更後もアプリを継続して使用すると、改訂された規約に同意したことになります。
-        </p>
-        <h2>お問い合わせ</h2>
-        <p>アプリの使用中に問題が発生した場合、または本規約についてご質問がある場合は、テクニカル サポートについて次のアドレスまでご連絡ください: vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="zhHans">
-        <h1>服务条款</h1>
-        <p><strong>生效日期</strong>: 2026-02-28</p>
-        <p>在使用由<strong>Zhao Changqing</strong>（“我们”或“我们的”）运营的<strong>榻榻米大师</strong>应用程序（“应用程序”）之前，请仔细阅读这些服务条款（“条款”）。</p>
-        <h2>1. 订阅和购买</h2>
-        <p>该应用程序提供通过应用内购买或订阅解锁的优质内容。购买订阅即表示您同意以下条款：</p>
-        <ul>
-            <li><strong>付款</strong>：付款将在确认购买时使用关联的付款方式直接通过您的 Apple ID 或 Google Play 帐户进行处理。</li>
-            <li><strong>自动续订</strong>：订阅会自动续订，除非在当前计费周期结束前至少 24 小时关闭或取消自动续订。您的帐户将在当前期限结束前 24 小时内收取续订费用。</li>
-            <li><strong>取消</strong>：您可以在购买后前往您的 App Store 或 Google Play
-                商店帐户设置来管理和取消您的订阅。取消订阅不会立即终止您的高级访问权限；您将继续拥有访问权限，直至当前计费周期结束。</li>
-            <li><strong>恢复购买</strong>：您可以随时使用应用程序订阅或设置页面中的“恢复购买”功能恢复以前的购买。这可确保您在跨设备或重新安装后仍能访问优质内容。</li>
-        </ul>
-        <h2>2. 知识产权</h2>
-        <p>该应用程序及其内容（文本、图形、图像）仍然是我们的专有财产。未经许可，您不得复制或分发内容。</p>
-        <h2>3. 责任限制</h2>
-        <p>共享的结构模式 (Joseki) 和测量仅供参考。对于在实际建筑环境中使用它们而造成的任何损害，我们不承担任何责任。</p>
-        <h2>4. 这些条款的变更</h2>
-        <p>我们保留随时更新或修改这些服务条款的权利，恕不另行通知。任何更改将在应用程序或我们的网站上发布更新后的条款后立即生效。您在任何修改后继续使用该应用程序即表示您接受修订后的条款。</p>
-        <h2>联系我们</h2>
-        <p>如果您在使用应用程序时遇到任何问题，或者对这些条款有任何疑问，请联系我们获取技术支持： vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="zhHant">
-        <h1>服務條款</h1>
-        <p><strong>生效日期</strong>: 2026-02-28</p>
-        <p>在使用由<strong>Zhao Changqing</strong>（“我們”或“我們的”）運營的<strong>榻榻米大師</strong>應用程式（“應用程式”）之前，請仔細閱讀這些服務條款（“條款”）。</p>
-        <h2>1. 訂閱和購買</h2>
-        <p>該應用程式提供透過應用程式內購買或訂閱解鎖的優質內容。購買訂閱即表示您同意以下條款：</p>
-        <ul>
-            <li><strong>付款</strong>：付款將在確認購買時使用關聯的付款方式直接透過您的 Apple ID 或 Google Play 帳戶進行處理。</li>
-            <li><strong>自動續訂</strong>：訂閱會自動續訂，除非在目前計費週期結束前至少 24 小時關閉或取消自動續訂。您的帳戶將在目前期限結束前 24 小時內收取續約費用。</li>
-            <li><strong>取消</strong>：您可以在購買後前往您的 App Store 或 Google Play
-                商店帳戶設定來管理和取消您的訂閱。取消訂閱不會立即終止您的進階存取權限；您將繼續擁有存取權限，直到目前計費週期結束。</li>
-            <li><strong>恢復購買</strong>：您可以隨時使用應用程式訂閱或設定頁面中的「恢復購買」功能來恢復先前的購買。這可確保您在跨裝置或重新安裝後仍能存取優質內容。</li>
-        </ul>
-        <h2>2. 智慧財產權</h2>
-        <p>該應用程式及其內容（文字、圖形、圖像）仍然是我們的專有財產。未經許可，您不得複製或散佈內容。</p>
-        <h2>3. 責任限制</h2>
-        <p>共享的結構模式 (Joseki) 和測量僅供參考。對於在實際建築環境中使用它們而造成的任何損害，我們不承擔任何責任。</p>
-        <h2>4. 這些條款的變更</h2>
-        <p>我們保留隨時更新或修改這些服務條款的權利，恕不另行通知。任何變更將在應用程式或我們的網站上發布更新後的條款後立即生效。您在任何修改後繼續使用該應用程式即表示您接受修訂後的條款。</p>
-        <h2>聯絡我們</h2>
-        <p>如果您在使用應用程式時遇到任何問題，或對這些條款有任何疑問，請聯絡我們以取得技術支援： vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="ko">
+
+<div class="lang-section" data-lang="ko">
         <h1>서비스 약관</h1>
         <p><strong>발효일</strong>: 2026-02-28</p>
         <p><strong>Zhao Changqing</strong>("당사", "당사" 또는 "당사")이 운영하는 <strong>Tatami Master</strong> 애플리케이션("앱")을 사용하기 전에
@@ -268,161 +287,8 @@
         <h2>문의하기</h2>
         <p>앱을 사용하는 동안 문제가 발생하거나 본 약관에 대해 질문이 있는 경우 기술 지원을 위해 vincentapp3@gmail.com으로 문의해 주세요.</p>
     </div>
-    <div class="lang-section" data-lang="id">
-        <h1>Ketentuan Layanan</h1>
-        <p><strong>Tanggal berlaku</strong>: 2026-02-28</p>
-        <p>Harap baca Ketentuan Layanan ("Ketentuan") ini dengan cermat sebelum menggunakan aplikasi <strong>Tatami
-                Master</strong> ("Aplikasi") yang dioperasikan oleh <strong>Zhao Changqing</strong> ("kita", "kami",
-            atau "milik kami").</p>
-        <h2>1. Langganan dan Pembelian</h2>
-        <p>Aplikasi ini menawarkan konten premium yang dibuka melalui pembelian atau langganan dalam aplikasi. Dengan
-            membeli langganan, Anda menyetujui ketentuan berikut:</p>
-        <ul>
-            <li><strong>Pembayaran</strong>: Pembayaran diproses langsung melalui ID Apple atau akun Google Play Anda
-                menggunakan metode pembayaran terkait di konfirmasi pembelian.</li>
-            <li><strong>Perpanjangan Otomatis</strong>: Langganan diperpanjang secara otomatis kecuali perpanjangan
-                otomatis dimatikan atau dibatalkan setidaknya 24 jam sebelum akhir periode penagihan saat ini. Akun Anda
-                akan dikenakan biaya untuk perpanjangan dalam waktu 24 jam sebelum akhir periode berjalan.</li>
-            <li><strong>Pembatalan</strong>: Anda dapat mengelola dan membatalkan langganan dengan membuka Pengaturan
-                Akun App Store atau Google Play Store setelah pembelian. Membatalkan langganan tidak akan langsung
-                menghentikan akses premium Anda; Anda akan terus memiliki akses hingga akhir siklus penagihan saat ini.
-            </li>
-            <li><strong>Pulihkan Pembelian</strong>: Anda dapat memulihkan pembelian sebelumnya kapan saja dengan
-                menggunakan fitur "Pulihkan Pembelian" yang terdapat di halaman langganan atau pengaturan Aplikasi. Hal
-                ini memastikan Anda mempertahankan akses ke konten premium di seluruh perangkat atau setelah instalasi
-                ulang.</li>
-        </ul>
-        <h2>2. Kekayaan Intelektual</h2>
-        <p>Aplikasi dan kontennya (teks, grafik, gambar) tetap menjadi milik eksklusif kami. Anda tidak boleh
-            mereproduksi atau mendistribusikan konten tanpa izin.</p>
-        <h2>3. Batasan Tanggung Jawab</h2>
-        <p>Pola struktural (Joseki) dan pengukuran yang dibagikan adalah untuk tujuan informasi. Kami tidak bertanggung
-            jawab atas segala kerusakan yang timbul dari penggunaannya dalam konteks arsitektur sebenarnya.</p>
-        <h2>4. Perubahan Ketentuan Ini</h2>
-        <p>Kami berhak memperbarui atau mengubah Ketentuan Layanan ini kapan saja tanpa pemberitahuan sebelumnya. Setiap
-            perubahan akan berlaku segera setelah ketentuan yang diperbarui diposting di Aplikasi atau di situs web
-            kami. Jika Anda terus menggunakan Aplikasi setelah modifikasi apa pun, Anda dianggap menerima Ketentuan yang
-            direvisi.</p>
-        <h2>Hubungi kami</h2>
-        <p>Jika Anda mengalami masalah apa pun saat menggunakan Aplikasi, atau jika Anda memiliki pertanyaan tentang
-            Ketentuan ini, silakan hubungi kami untuk dukungan teknis di: vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="vi">
-        <h1>Điều khoản dịch vụ</h1>
-        <p><strong>Ngày có hiệu lực</strong>: 2026-02-28</p>
-        <p>Vui lòng đọc kỹ các Điều khoản dịch vụ này ("Điều khoản") trước khi sử dụng ứng dụng <strong>Tatami
-                Master</strong> ("Ứng dụng") do <strong>Zhao Changqing</strong> ("chúng tôi" hoặc "của chúng tôi").</p>
-        <h2>1. Đăng ký và mua hàng</h2>
-        <p>Ứng dụng cung cấp nội dung cao cấp được mở khóa thông qua mua hàng hoặc đăng ký trong ứng dụng. Bằng cách mua
-            đăng ký, bạn đồng ý với các điều khoản sau:</p>
-        <ul>
-            <li><strong>Thanh toán</strong>: Thanh toán được xử lý trực tiếp thông qua ID Apple hoặc tài khoản Google
-                Play của bạn bằng phương thức thanh toán được liên kết khi xác nhận mua hàng.</li>
-            <li><strong>Tự động gia hạn</strong>: Đăng ký tự động gia hạn trừ khi tính năng tự động gia hạn bị tắt hoặc
-                hủy ít nhất 24 giờ trước khi kết thúc thời hạn thanh toán hiện tại. Tài khoản của bạn sẽ bị tính phí gia
-                hạn trong vòng 24 giờ trước khi kết thúc giai đoạn hiện tại.</li>
-            <li><strong>Hủy</strong>: Bạn có thể quản lý và hủy đăng ký của mình bằng cách truy cập Cài đặt tài khoản
-                App Store hoặc Cửa hàng Google Play sau khi mua. Việc hủy đăng ký sẽ không chấm dứt ngay quyền truy cập
-                cao cấp của bạn; bạn sẽ tiếp tục có quyền truy cập cho đến khi kết thúc chu kỳ thanh toán hiện tại.</li>
-            <li><strong>Khôi phục các giao dịch mua</strong>: Bạn có thể khôi phục các giao dịch mua trước đó của mình
-                bất kỳ lúc nào bằng cách sử dụng tính năng "Khôi phục các giao dịch mua" có trong trang cài đặt hoặc
-                đăng ký của Ứng dụng. Điều này đảm bảo bạn duy trì quyền truy cập vào nội dung cao cấp trên các thiết bị
-                hoặc sau khi cài đặt lại.</li>
-        </ul>
-        <h2>2. Sở hữu trí tuệ</h2>
-        <p>Ứng dụng và nội dung của nó (văn bản, đồ họa, hình ảnh) vẫn là tài sản độc quyền của chúng tôi. Bạn không
-            được sao chép hoặc phân phối nội dung mà không được phép.</p>
-        <h2>3. Giới hạn trách nhiệm pháp lý</h2>
-        <p>Các mẫu cấu trúc (Joseki) và các phép đo được chia sẻ nhằm mục đích cung cấp thông tin. Chúng tôi sẽ không
-            chịu trách nhiệm pháp lý về bất kỳ thiệt hại nào phát sinh từ việc sử dụng chúng trong bối cảnh kiến ​​trúc
-            thực tế.</p>
-        <h2>4. Thay đổi các Điều khoản này</h2>
-        <p>Chúng tôi có quyền cập nhật hoặc sửa đổi các Điều khoản dịch vụ này bất cứ lúc nào mà không cần thông báo
-            trước. Mọi thay đổi sẽ có hiệu lực ngay lập tức khi đăng các điều khoản cập nhật trong Ứng dụng hoặc trên
-            trang web của chúng tôi. Việc bạn tiếp tục sử dụng Ứng dụng sau bất kỳ sửa đổi nào đồng nghĩa với việc bạn
-            chấp nhận Điều khoản sửa đổi.</p>
-        <h2>Liên hệ với chúng tôi</h2>
-        <p>Nếu bạn gặp bất kỳ vấn đề nào khi sử dụng Ứng dụng hoặc nếu bạn có bất kỳ câu hỏi nào về các Điều khoản này,
-            vui lòng liên hệ với chúng tôi để được hỗ trợ kỹ thuật tại: vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="th">
-        <h1>ข้อกำหนดในการให้บริการ</h1>
-        <p><strong>วันที่มีผลบังคับใช้</strong>: 2026-02-28</p>
-        <p>โปรดอ่านข้อกำหนดในการให้บริการ ("ข้อกำหนด") เหล่านี้อย่างละเอียดก่อนใช้แอปพลิเคชัน <strong>Tatami
-                Master</strong> ("แอป") ที่ดำเนินการโดย <strong>Zhao Changqing</strong> ("พวกเรา" "เรา" หรือ "ของเรา")
-        </p>
-        <h2>1. การสมัครสมาชิกและการซื้อ</h2>
-        <p>แอพนำเสนอเนื้อหาพรีเมี่ยมที่ปลดล็อคผ่านการซื้อในแอพหรือการสมัครสมาชิก โดยการซื้อการสมัครสมาชิก
-            แสดงว่าคุณยอมรับข้อกำหนดต่อไปนี้:</p>
-        <ul>
-            <li><strong>การชำระเงิน</strong>: การชำระเงินจะดำเนินการโดยตรงผ่าน Apple ID หรือบัญชี Google Play
-                ของคุณโดยใช้วิธีการชำระเงินที่เกี่ยวข้องเมื่อยืนยันการซื้อ</li>
-            <li><strong>ต่ออายุอัตโนมัติ</strong>: การสมัครสมาชิกจะต่ออายุโดยอัตโนมัติ
-                เว้นแต่ว่าการต่ออายุอัตโนมัติจะถูกปิดหรือยกเลิกอย่างน้อย 24
-                ชั่วโมงก่อนสิ้นสุดช่วงเวลาที่เรียกเก็บเงินปัจจุบัน บัญชีของคุณจะถูกเรียกเก็บเงินสำหรับการต่ออายุภายใน 24
-                ชั่วโมงก่อนสิ้นสุดระยะเวลาปัจจุบัน</li>
-            <li><strong>การยกเลิก</strong>: คุณสามารถจัดการและยกเลิกการสมัครสมาชิกของคุณได้โดยไปที่การตั้งค่าบัญชี App
-                Store หรือ Google Play Store หลังจากการซื้อ
-                การยกเลิกการสมัครสมาชิกจะไม่ยุติการเข้าถึงระดับพรีเมียมของคุณทันที
-                คุณจะยังสามารถเข้าถึงได้ต่อไปจนกว่าจะสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน</li>
-            <li><strong>คืนค่าการซื้อ</strong>: คุณสามารถคืนค่าการซื้อก่อนหน้าของคุณได้ตลอดเวลาโดยใช้คุณสมบัติ
-                "กู้คืนการซื้อ" ที่พบในการสมัครสมาชิกหรือหน้าการตั้งค่าของแอป
-                สิ่งนี้ทำให้แน่ใจได้ว่าคุณจะสามารถเข้าถึงเนื้อหาพรีเมียมบนอุปกรณ์ต่างๆ หรือหลังการติดตั้งใหม่ได้</li>
-        </ul>
-        <h2>2. ทรัพย์สินทางปัญญา</h2>
-        <p>แอปและเนื้อหา (ข้อความ กราฟิก รูปภาพ) ยังคงเป็นทรัพย์สินของเราแต่เพียงผู้เดียว
-            คุณไม่สามารถทำซ้ำหรือแจกจ่ายเนื้อหาโดยไม่ได้รับอนุญาต</p>
-        <h2>3. ข้อจำกัดความรับผิด</h2>
-        <p>รูปแบบโครงสร้าง (Joseki) และการวัดที่ใช้ร่วมกันมีไว้เพื่อวัตถุประสงค์ในการให้ข้อมูล
-            เราจะไม่รับผิดชอบต่อความเสียหายใด ๆ ที่เกิดขึ้นจากการใช้งานในบริบททางสถาปัตยกรรมที่เกิดขึ้นจริง</p>
-        <h2>4. การเปลี่ยนแปลงข้อกำหนดเหล่านี้</h2>
-        <p>เราขอสงวนสิทธิ์ในการปรับปรุงหรือแก้ไขข้อกำหนดในการให้บริการเหล่านี้ได้ตลอดเวลาโดยไม่ต้องแจ้งให้ทราบล่วงหน้า
-            การเปลี่ยนแปลงใด ๆ จะมีผลทันทีเมื่อมีการโพสต์ข้อกำหนดที่อัปเดตภายในแอปหรือบนเว็บไซต์ของเรา
-            การใช้แอปต่อไปของคุณหลังจากการแก้ไขใด ๆ ถือว่าคุณยอมรับข้อกำหนดที่แก้ไข</p>
-        <h2>ติดต่อเรา</h2>
-        <p>หากคุณพบปัญหาใด ๆ ในขณะที่ใช้แอป หรือหากคุณมีคำถามใด ๆ เกี่ยวกับข้อกำหนดเหล่านี้
-            โปรดติดต่อเราเพื่อขอรับการสนับสนุนด้านเทคนิคที่: vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="pt">
-        <h1>Termos de Serviço</h1>
-        <p><strong>Data Efetiva</strong>: 2026-02-28</p>
-        <p>Por favor, leia estes Termos de Serviço ("Termos") cuidadosamente antes de usar o aplicativo <strong>Tatami
-                Master</strong> ("o Aplicativo") operado por <strong>Zhao Changqing</strong> ("nós", "nós" ou "nosso").
-        </p>
-        <h2>1. Assinaturas e compras</h2>
-        <p>O aplicativo oferece conteúdo premium desbloqueado por meio de compras ou assinaturas no aplicativo. Ao
-            adquirir uma assinatura, você concorda com os seguintes termos:</p>
-        <ul>
-            <li><strong>Pagamento</strong>: Os pagamentos são processados ​​diretamente através do seu ID Apple ou conta
-                do Google Play usando o método de pagamento associado na confirmação da compra.</li>
-            <li><strong>Renovação automática</strong>: as assinaturas são renovadas automaticamente, a menos que a
-                renovação automática seja desativada ou cancelada pelo menos 24 horas antes do final do período de
-                cobrança atual. A renovação da sua conta será cobrada 24 horas antes do final do período atual.</li>
-            <li><strong>Cancelamento</strong>: você pode gerenciar e cancelar suas assinaturas acessando as
-                configurações da sua conta na App Store ou na Google Play Store após a compra. O cancelamento de uma
-                assinatura não encerrará imediatamente seu acesso premium; você continuará tendo acesso até o final do
-                ciclo de faturamento atual.</li>
-            <li><strong>Restaurar compras</strong>: você pode restaurar suas compras anteriores a qualquer momento
-                usando o recurso "Restaurar compras" encontrado na assinatura ou na página de configurações do
-                aplicativo. Isso garante que você mantenha o acesso ao conteúdo premium em todos os dispositivos ou após
-                a reinstalação.</li>
-        </ul>
-        <h2>2. Propriedade Intelectual</h2>
-        <p>O App e seu conteúdo (textos, gráficos, imagens) permanecem nossa propriedade exclusiva. Você não pode
-            reproduzir ou distribuir o conteúdo sem permissão.</p>
-        <h2>3. Limitação de Responsabilidade</h2>
-        <p>Os padrões estruturais (Joseki) e medidas compartilhadas são para fins informativos. Não seremos responsáveis
-            ​​por quaisquer danos decorrentes da sua utilização em contextos arquitetónicos reais.</p>
-        <h2>4. Alterações nestes Termos</h2>
-        <p>Reservamo-nos o direito de atualizar ou modificar estes Termos de Serviço a qualquer momento sem aviso
-            prévio. Quaisquer alterações entrarão em vigor imediatamente após a publicação dos termos atualizados no
-            Aplicativo ou em nosso site. O uso continuado do Aplicativo após quaisquer modificações constitui sua
-            aceitação dos Termos revisados.</p>
-        <h2>Contate-nos</h2>
-        <p>Se você encontrar algum problema ao usar o aplicativo ou se tiver alguma dúvida sobre estes Termos, entre em
-            contato conosco para obter suporte técnico em: vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="es">
+
+<div class="lang-section" data-lang="es">
         <h1>Términos de servicio</h1>
         <p><strong>Fecha de vigencia</strong>: 2026-02-28</p>
         <p>Lea atentamente estos Términos de servicio ("Términos") antes de utilizar la aplicación <strong>Tatami
@@ -462,7 +328,51 @@
         <p>Si tiene algún problema al utilizar la aplicación o si tiene alguna pregunta sobre estos Términos,
             comuníquese con nosotros para obtener asistencia técnica en: vincentapp3@gmail.com</p>
     </div>
-    <div class="lang-section" data-lang="de">
+
+<div class="lang-section" data-lang="fr">
+        <h1>Conditions d'utilisation</h1>
+        <p><strong>Date d'entrée en vigueur</strong>: 2026-02-28</p>
+        <p>Veuillez lire attentivement ces conditions d'utilisation (« Conditions ») avant d'utiliser l'application
+            <strong>Tatami Master</strong> (« l'Application ») exploitée par <strong>Zhao Changqing</strong> (« nous »,
+            « notre » ou « notre »).
+        </p>
+        <h2>1. Abonnements et achats</h2>
+        <p>L'application propose du contenu premium débloqué via des achats ou des abonnements intégrés. En achetant un
+            abonnement, vous acceptez les conditions suivantes :</p>
+        <ul>
+            <li><strong>Paiement</strong> : les paiements sont traités directement via votre identifiant Apple ou votre
+                compte Google Play en utilisant votre mode de paiement associé lors de la confirmation de l'achat.</li>
+            <li><strong>Renouvellement automatique</strong> : les abonnements se renouvellent automatiquement, sauf si
+                le renouvellement automatique est désactivé ou annulé au moins 24 heures avant la fin de la période de
+                facturation en cours. Votre compte sera facturé pour le renouvellement dans les 24 heures avant la fin
+                de la période en cours.</li>
+            <li><strong>Annulation</strong> : vous pouvez gérer et annuler vos abonnements en accédant aux paramètres de
+                votre compte App Store ou Google Play Store après l'achat. L'annulation d'un abonnement ne mettra pas
+                immédiatement fin à votre accès premium ; vous continuerez à y avoir accès jusqu'à la fin du cycle de
+                facturation en cours.</li>
+            <li><strong>Restaurer les achats</strong> : vous pouvez restaurer vos achats précédents à tout moment en
+                utilisant la fonction "Restaurer les achats" trouvée dans la page d'abonnement ou de paramètres de
+                l'application. Cela garantit que vous conservez l’accès au contenu premium sur tous les appareils ou
+                après la réinstallation.</li>
+        </ul>
+        <h2>2. Propriété intellectuelle</h2>
+        <p>L'Application et son contenu (textes, graphiques, images) restent notre propriété exclusive. Vous ne pouvez
+            pas reproduire ou distribuer le contenu sans autorisation.</p>
+        <h2>3. Limitation de responsabilité</h2>
+        <p>Les modèles structurels (Joseki) et les mesures partagées sont à titre informatif. Nous ne pourrons être
+            tenus responsables de tout dommage résultant de leur utilisation dans des contextes architecturaux réels.
+        </p>
+        <h2>4. Modifications de ces conditions</h2>
+        <p>Nous nous réservons le droit de mettre à jour ou de modifier ces conditions d'utilisation à tout moment et
+            sans préavis. Toute modification entrera en vigueur immédiatement après la publication des conditions mises
+            à jour dans l'application ou sur notre site Web. Votre utilisation continue de l’Application après toute
+            modification constitue votre acceptation des Conditions révisées.</p>
+        <h2>Contactez-nous</h2>
+        <p>Si vous rencontrez des problèmes lors de l'utilisation de l'application ou si vous avez des questions sur ces
+            conditions, veuillez nous contacter pour obtenir une assistance technique à : vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="de">
         <h1>Nutzungsbedingungen</h1>
         <p><strong>Datum des Inkrafttretens</strong>: 2026-02-28</p>
         <p>Bitte lesen Sie diese Nutzungsbedingungen („Bedingungen“) sorgfältig durch, bevor Sie die von <strong>Zhao
@@ -502,49 +412,8 @@
         <p>Wenn bei der Nutzung der App Probleme auftreten oder Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie
             uns bitte für technischen Support unter: vincentapp3@gmail.com</p>
     </div>
-    <div class="lang-section" data-lang="fr">
-        <h1>Conditions d'utilisation</h1>
-        <p><strong>Date d'entrée en vigueur</strong>: 2026-02-28</p>
-        <p>Veuillez lire attentivement ces conditions d'utilisation (« Conditions ») avant d'utiliser l'application
-            <strong>Tatami Master</strong> (« l'Application ») exploitée par <strong>Zhao Changqing</strong> (« nous »,
-            « notre » ou « notre »).
-        </p>
-        <h2>1. Abonnements et achats</h2>
-        <p>L'application propose du contenu premium débloqué via des achats ou des abonnements intégrés. En achetant un
-            abonnement, vous acceptez les conditions suivantes :</p>
-        <ul>
-            <li><strong>Paiement</strong> : les paiements sont traités directement via votre identifiant Apple ou votre
-                compte Google Play en utilisant votre mode de paiement associé lors de la confirmation de l'achat.</li>
-            <li><strong>Renouvellement automatique</strong> : les abonnements se renouvellent automatiquement, sauf si
-                le renouvellement automatique est désactivé ou annulé au moins 24 heures avant la fin de la période de
-                facturation en cours. Votre compte sera facturé pour le renouvellement dans les 24 heures avant la fin
-                de la période en cours.</li>
-            <li><strong>Annulation</strong> : vous pouvez gérer et annuler vos abonnements en accédant aux paramètres de
-                votre compte App Store ou Google Play Store après l'achat. L'annulation d'un abonnement ne mettra pas
-                immédiatement fin à votre accès premium ; vous continuerez à y avoir accès jusqu'à la fin du cycle de
-                facturation en cours.</li>
-            <li><strong>Restaurer les achats</strong> : vous pouvez restaurer vos achats précédents à tout moment en
-                utilisant la fonction "Restaurer les achats" trouvée dans la page d'abonnement ou de paramètres de
-                l'application. Cela garantit que vous conservez l’accès au contenu premium sur tous les appareils ou
-                après la réinstallation.</li>
-        </ul>
-        <h2>2. Propriété intellectuelle</h2>
-        <p>L'Application et son contenu (textes, graphiques, images) restent notre propriété exclusive. Vous ne pouvez
-            pas reproduire ou distribuer le contenu sans autorisation.</p>
-        <h2>3. Limitation de responsabilité</h2>
-        <p>Les modèles structurels (Joseki) et les mesures partagées sont à titre informatif. Nous ne pourrons être
-            tenus responsables de tout dommage résultant de leur utilisation dans des contextes architecturaux réels.
-        </p>
-        <h2>4. Modifications de ces conditions</h2>
-        <p>Nous nous réservons le droit de mettre à jour ou de modifier ces conditions d'utilisation à tout moment et
-            sans préavis. Toute modification entrera en vigueur immédiatement après la publication des conditions mises
-            à jour dans l'application ou sur notre site Web. Votre utilisation continue de l’Application après toute
-            modification constitue votre acceptation des Conditions révisées.</p>
-        <h2>Contactez-nous</h2>
-        <p>Si vous rencontrez des problèmes lors de l'utilisation de l'application ou si vous avez des questions sur ces
-            conditions, veuillez nous contacter pour obtenir une assistance technique à : vincentapp3@gmail.com</p>
-    </div>
-    <div class="lang-section" data-lang="it">
+
+<div class="lang-section" data-lang="it">
         <h1>Termini di servizio</h1>
         <p><strong>Data di entrata in vigore</strong>: 2026-02-28</p>
         <p>Si prega di leggere attentamente i presenti Termini di servizio ("Termini") prima di utilizzare
@@ -584,22 +453,182 @@
         <p>Se riscontri problemi durante l'utilizzo dell'App o se hai domande sui presenti Termini, contattaci per
             supporto tecnico all'indirizzo: vincentapp3@gmail.com</p>
     </div>
+
+<div class="lang-section" data-lang="pt">
+        <h1>Termos de Serviço</h1>
+        <p><strong>Data Efetiva</strong>: 2026-02-28</p>
+        <p>Por favor, leia estes Termos de Serviço ("Termos") cuidadosamente antes de usar o aplicativo <strong>Tatami
+                Master</strong> ("o Aplicativo") operado por <strong>Zhao Changqing</strong> ("nós", "nós" ou "nosso").
+        </p>
+        <h2>1. Assinaturas e compras</h2>
+        <p>O aplicativo oferece conteúdo premium desbloqueado por meio de compras ou assinaturas no aplicativo. Ao
+            adquirir uma assinatura, você concorda com os seguintes termos:</p>
+        <ul>
+            <li><strong>Pagamento</strong>: Os pagamentos são processados ​​diretamente através do seu ID Apple ou conta
+                do Google Play usando o método de pagamento associado na confirmação da compra.</li>
+            <li><strong>Renovação automática</strong>: as assinaturas são renovadas automaticamente, a menos que a
+                renovação automática seja desativada ou cancelada pelo menos 24 horas antes do final do período de
+                cobrança atual. A renovação da sua conta será cobrada 24 horas antes do final do período atual.</li>
+            <li><strong>Cancelamento</strong>: você pode gerenciar e cancelar suas assinaturas acessando as
+                configurações da sua conta na App Store ou na Google Play Store após a compra. O cancelamento de uma
+                assinatura não encerrará imediatamente seu acesso premium; você continuará tendo acesso até o final do
+                ciclo de faturamento atual.</li>
+            <li><strong>Restaurar compras</strong>: você pode restaurar suas compras anteriores a qualquer momento
+                usando o recurso "Restaurar compras" encontrado na assinatura ou na página de configurações do
+                aplicativo. Isso garante que você mantenha o acesso ao conteúdo premium em todos os dispositivos ou após
+                a reinstalação.</li>
+        </ul>
+        <h2>2. Propriedade Intelectual</h2>
+        <p>O App e seu conteúdo (textos, gráficos, imagens) permanecem nossa propriedade exclusiva. Você não pode
+            reproduzir ou distribuir o conteúdo sem permissão.</p>
+        <h2>3. Limitação de Responsabilidade</h2>
+        <p>Os padrões estruturais (Joseki) e medidas compartilhadas são para fins informativos. Não seremos responsáveis
+            ​​por quaisquer danos decorrentes da sua utilização em contextos arquitetónicos reais.</p>
+        <h2>4. Alterações nestes Termos</h2>
+        <p>Reservamo-nos o direito de atualizar ou modificar estes Termos de Serviço a qualquer momento sem aviso
+            prévio. Quaisquer alterações entrarão em vigor imediatamente após a publicação dos termos atualizados no
+            Aplicativo ou em nosso site. O uso continuado do Aplicativo após quaisquer modificações constitui sua
+            aceitação dos Termos revisados.</p>
+        <h2>Contate-nos</h2>
+        <p>Se você encontrar algum problema ao usar o aplicativo ou se tiver alguma dúvida sobre estes Termos, entre em
+            contato conosco para obter suporte técnico em: vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="id">
+        <h1>Ketentuan Layanan</h1>
+        <p><strong>Tanggal berlaku</strong>: 2026-02-28</p>
+        <p>Harap baca Ketentuan Layanan ("Ketentuan") ini dengan cermat sebelum menggunakan aplikasi <strong>Tatami
+                Master</strong> ("Aplikasi") yang dioperasikan oleh <strong>Zhao Changqing</strong> ("kita", "kami",
+            atau "milik kami").</p>
+        <h2>1. Langganan dan Pembelian</h2>
+        <p>Aplikasi ini menawarkan konten premium yang dibuka melalui pembelian atau langganan dalam aplikasi. Dengan
+            membeli langganan, Anda menyetujui ketentuan berikut:</p>
+        <ul>
+            <li><strong>Pembayaran</strong>: Pembayaran diproses langsung melalui ID Apple atau akun Google Play Anda
+                menggunakan metode pembayaran terkait di konfirmasi pembelian.</li>
+            <li><strong>Perpanjangan Otomatis</strong>: Langganan diperpanjang secara otomatis kecuali perpanjangan
+                otomatis dimatikan atau dibatalkan setidaknya 24 jam sebelum akhir periode penagihan saat ini. Akun Anda
+                akan dikenakan biaya untuk perpanjangan dalam waktu 24 jam sebelum akhir periode berjalan.</li>
+            <li><strong>Pembatalan</strong>: Anda dapat mengelola dan membatalkan langganan dengan membuka Pengaturan
+                Akun App Store atau Google Play Store setelah pembelian. Membatalkan langganan tidak akan langsung
+                menghentikan akses premium Anda; Anda akan terus memiliki akses hingga akhir siklus penagihan saat ini.
+            </li>
+            <li><strong>Pulihkan Pembelian</strong>: Anda dapat memulihkan pembelian sebelumnya kapan saja dengan
+                menggunakan fitur "Pulihkan Pembelian" yang terdapat di halaman langganan atau pengaturan Aplikasi. Hal
+                ini memastikan Anda mempertahankan akses ke konten premium di seluruh perangkat atau setelah instalasi
+                ulang.</li>
+        </ul>
+        <h2>2. Kekayaan Intelektual</h2>
+        <p>Aplikasi dan kontennya (teks, grafik, gambar) tetap menjadi milik eksklusif kami. Anda tidak boleh
+            mereproduksi atau mendistribusikan konten tanpa izin.</p>
+        <h2>3. Batasan Tanggung Jawab</h2>
+        <p>Pola struktural (Joseki) dan pengukuran yang dibagikan adalah untuk tujuan informasi. Kami tidak bertanggung
+            jawab atas segala kerusakan yang timbul dari penggunaannya dalam konteks arsitektur sebenarnya.</p>
+        <h2>4. Perubahan Ketentuan Ini</h2>
+        <p>Kami berhak memperbarui atau mengubah Ketentuan Layanan ini kapan saja tanpa pemberitahuan sebelumnya. Setiap
+            perubahan akan berlaku segera setelah ketentuan yang diperbarui diposting di Aplikasi atau di situs web
+            kami. Jika Anda terus menggunakan Aplikasi setelah modifikasi apa pun, Anda dianggap menerima Ketentuan yang
+            direvisi.</p>
+        <h2>Hubungi kami</h2>
+        <p>Jika Anda mengalami masalah apa pun saat menggunakan Aplikasi, atau jika Anda memiliki pertanyaan tentang
+            Ketentuan ini, silakan hubungi kami untuk dukungan teknis di: vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="vi">
+        <h1>Điều khoản dịch vụ</h1>
+        <p><strong>Ngày có hiệu lực</strong>: 2026-02-28</p>
+        <p>Vui lòng đọc kỹ các Điều khoản dịch vụ này ("Điều khoản") trước khi sử dụng ứng dụng <strong>Tatami
+                Master</strong> ("Ứng dụng") do <strong>Zhao Changqing</strong> ("chúng tôi" hoặc "của chúng tôi").</p>
+        <h2>1. Đăng ký và mua hàng</h2>
+        <p>Ứng dụng cung cấp nội dung cao cấp được mở khóa thông qua mua hàng hoặc đăng ký trong ứng dụng. Bằng cách mua
+            đăng ký, bạn đồng ý với các điều khoản sau:</p>
+        <ul>
+            <li><strong>Thanh toán</strong>: Thanh toán được xử lý trực tiếp thông qua ID Apple hoặc tài khoản Google
+                Play của bạn bằng phương thức thanh toán được liên kết khi xác nhận mua hàng.</li>
+            <li><strong>Tự động gia hạn</strong>: Đăng ký tự động gia hạn trừ khi tính năng tự động gia hạn bị tắt hoặc
+                hủy ít nhất 24 giờ trước khi kết thúc thời hạn thanh toán hiện tại. Tài khoản của bạn sẽ bị tính phí gia
+                hạn trong vòng 24 giờ trước khi kết thúc giai đoạn hiện tại.</li>
+            <li><strong>Hủy</strong>: Bạn có thể quản lý và hủy đăng ký của mình bằng cách truy cập Cài đặt tài khoản
+                App Store hoặc Cửa hàng Google Play sau khi mua. Việc hủy đăng ký sẽ không chấm dứt ngay quyền truy cập
+                cao cấp của bạn; bạn sẽ tiếp tục có quyền truy cập cho đến khi kết thúc chu kỳ thanh toán hiện tại.</li>
+            <li><strong>Khôi phục các giao dịch mua</strong>: Bạn có thể khôi phục các giao dịch mua trước đó của mình
+                bất kỳ lúc nào bằng cách sử dụng tính năng "Khôi phục các giao dịch mua" có trong trang cài đặt hoặc
+                đăng ký của Ứng dụng. Điều này đảm bảo bạn duy trì quyền truy cập vào nội dung cao cấp trên các thiết bị
+                hoặc sau khi cài đặt lại.</li>
+        </ul>
+        <h2>2. Sở hữu trí tuệ</h2>
+        <p>Ứng dụng và nội dung của nó (văn bản, đồ họa, hình ảnh) vẫn là tài sản độc quyền của chúng tôi. Bạn không
+            được sao chép hoặc phân phối nội dung mà không được phép.</p>
+        <h2>3. Giới hạn trách nhiệm pháp lý</h2>
+        <p>Các mẫu cấu trúc (Joseki) và các phép đo được chia sẻ nhằm mục đích cung cấp thông tin. Chúng tôi sẽ không
+            chịu trách nhiệm pháp lý về bất kỳ thiệt hại nào phát sinh từ việc sử dụng chúng trong bối cảnh kiến ​​trúc
+            thực tế.</p>
+        <h2>4. Thay đổi các Điều khoản này</h2>
+        <p>Chúng tôi có quyền cập nhật hoặc sửa đổi các Điều khoản dịch vụ này bất cứ lúc nào mà không cần thông báo
+            trước. Mọi thay đổi sẽ có hiệu lực ngay lập tức khi đăng các điều khoản cập nhật trong Ứng dụng hoặc trên
+            trang web của chúng tôi. Việc bạn tiếp tục sử dụng Ứng dụng sau bất kỳ sửa đổi nào đồng nghĩa với việc bạn
+            chấp nhận Điều khoản sửa đổi.</p>
+        <h2>Liên hệ với chúng tôi</h2>
+        <p>Nếu bạn gặp bất kỳ vấn đề nào khi sử dụng Ứng dụng hoặc nếu bạn có bất kỳ câu hỏi nào về các Điều khoản này,
+            vui lòng liên hệ với chúng tôi để được hỗ trợ kỹ thuật tại: vincentapp3@gmail.com</p>
+    </div>
+
+<div class="lang-section" data-lang="th">
+        <h1>ข้อกำหนดในการให้บริการ</h1>
+        <p><strong>วันที่มีผลบังคับใช้</strong>: 2026-02-28</p>
+        <p>โปรดอ่านข้อกำหนดในการให้บริการ ("ข้อกำหนด") เหล่านี้อย่างละเอียดก่อนใช้แอปพลิเคชัน <strong>Tatami
+                Master</strong> ("แอป") ที่ดำเนินการโดย <strong>Zhao Changqing</strong> ("พวกเรา" "เรา" หรือ "ของเรา")
+        </p>
+        <h2>1. การสมัครสมาชิกและการซื้อ</h2>
+        <p>แอพนำเสนอเนื้อหาพรีเมี่ยมที่ปลดล็อคผ่านการซื้อในแอพหรือการสมัครสมาชิก โดยการซื้อการสมัครสมาชิก
+            แสดงว่าคุณยอมรับข้อกำหนดต่อไปนี้:</p>
+        <ul>
+            <li><strong>การชำระเงิน</strong>: การชำระเงินจะดำเนินการโดยตรงผ่าน Apple ID หรือบัญชี Google Play
+                ของคุณโดยใช้วิธีการชำระเงินที่เกี่ยวข้องเมื่อยืนยันการซื้อ</li>
+            <li><strong>ต่ออายุอัตโนมัติ</strong>: การสมัครสมาชิกจะต่ออายุโดยอัตโนมัติ
+                เว้นแต่ว่าการต่ออายุอัตโนมัติจะถูกปิดหรือยกเลิกอย่างน้อย 24
+                ชั่วโมงก่อนสิ้นสุดช่วงเวลาที่เรียกเก็บเงินปัจจุบัน บัญชีของคุณจะถูกเรียกเก็บเงินสำหรับการต่ออายุภายใน 24
+                ชั่วโมงก่อนสิ้นสุดระยะเวลาปัจจุบัน</li>
+            <li><strong>การยกเลิก</strong>: คุณสามารถจัดการและยกเลิกการสมัครสมาชิกของคุณได้โดยไปที่การตั้งค่าบัญชี App
+                Store หรือ Google Play Store หลังจากการซื้อ
+                การยกเลิกการสมัครสมาชิกจะไม่ยุติการเข้าถึงระดับพรีเมียมของคุณทันที
+                คุณจะยังสามารถเข้าถึงได้ต่อไปจนกว่าจะสิ้นสุดรอบการเรียกเก็บเงินปัจจุบัน</li>
+            <li><strong>คืนค่าการซื้อ</strong>: คุณสามารถคืนค่าการซื้อก่อนหน้าของคุณได้ตลอดเวลาโดยใช้คุณสมบัติ
+                "กู้คืนการซื้อ" ที่พบในการสมัครสมาชิกหรือหน้าการตั้งค่าของแอป
+                สิ่งนี้ทำให้แน่ใจได้ว่าคุณจะสามารถเข้าถึงเนื้อหาพรีเมียมบนอุปกรณ์ต่างๆ หรือหลังการติดตั้งใหม่ได้</li>
+        </ul>
+        <h2>2. ทรัพย์สินทางปัญญา</h2>
+        <p>แอปและเนื้อหา (ข้อความ กราฟิก รูปภาพ) ยังคงเป็นทรัพย์สินของเราแต่เพียงผู้เดียว
+            คุณไม่สามารถทำซ้ำหรือแจกจ่ายเนื้อหาโดยไม่ได้รับอนุญาต</p>
+        <h2>3. ข้อจำกัดความรับผิด</h2>
+        <p>รูปแบบโครงสร้าง (Joseki) และการวัดที่ใช้ร่วมกันมีไว้เพื่อวัตถุประสงค์ในการให้ข้อมูล
+            เราจะไม่รับผิดชอบต่อความเสียหายใด ๆ ที่เกิดขึ้นจากการใช้งานในบริบททางสถาปัตยกรรมที่เกิดขึ้นจริง</p>
+        <h2>4. การเปลี่ยนแปลงข้อกำหนดเหล่านี้</h2>
+        <p>เราขอสงวนสิทธิ์ในการปรับปรุงหรือแก้ไขข้อกำหนดในการให้บริการเหล่านี้ได้ตลอดเวลาโดยไม่ต้องแจ้งให้ทราบล่วงหน้า
+            การเปลี่ยนแปลงใด ๆ จะมีผลทันทีเมื่อมีการโพสต์ข้อกำหนดที่อัปเดตภายในแอปหรือบนเว็บไซต์ของเรา
+            การใช้แอปต่อไปของคุณหลังจากการแก้ไขใด ๆ ถือว่าคุณยอมรับข้อกำหนดที่แก้ไข</p>
+        <h2>ติดต่อเรา</h2>
+        <p>หากคุณพบปัญหาใด ๆ ในขณะที่ใช้แอป หรือหากคุณมีคำถามใด ๆ เกี่ยวกับข้อกำหนดเหล่านี้
+            โปรดติดต่อเราเพื่อขอรับการสนับสนุนด้านเทคนิคที่: vincentapp3@gmail.com</p>
+    </div>
+
     <script>
         const LANG_MAP = {
-            'en': 'English',
-            'ja': '\u65E5\u672C\u8A9E', // 日本語
             'zhHans': '\u7B80\u4F53\u4E2D\u6587', // 简体中文
             'zhHant': '\u7E41\u9AD4\u4E2D\u6587', // 繁體中文
+            'ja': '\u65E5\u672C\u8A9E', // 日本語
+            'en': 'English',
             'ko': '\uD55C\uAD6D\uC5B4', // 한국어
+            'es': 'Espa\u00F1ol',
+            'fr': 'Fran\u00E7ais',
+            'de': 'Deutsch',
+            'it': 'Italiano',
+            'pt': 'Portugu\u00EAs',
             'id': 'Bahasa Indonesia',
             'vi': 'Ti\u1EBFng Vi\u1EC7t',
-            'th': '\u0E44\u0E17\u0E22',
-            'pt': 'Portugu\u00EAs',
-            'es': 'Espa\u00F1ol',
-            'de': 'Deutsch',
-            'fr': 'Fran\u00E7ais',
-            'it': 'Italiano'
+            'th': '\u0E44\u0E17\u0E22'
         };
+
         function switchLanguage(lang) {
             document.querySelectorAll('.lang-section').forEach(function (el) { el.classList.remove('active'); });
             const activeSection = document.querySelector('.lang-section[data-lang="' + lang + '"]');
@@ -614,6 +643,7 @@
                 // 使用硬编码的 Unicode 转义字符串，绝对避免乱码
                 trigger.innerText = LANG_MAP[lang] || lang;
             }
+
             document.documentElement.lang = lang;
             const url = new URL(window.location);
             url.searchParams.set('lang', lang);
@@ -622,10 +652,11 @@
         window.onload = function () {
             const urlParams = new URLSearchParams(window.location.search);
             let lang = urlParams.get('lang');
-            const supportedLangs = ["en", "ja", "zhHans", "zhHant", "ko", "id", "vi", "th", "pt", "es", "de", "fr", "it"];
+            const supportedLangs = ["zhHans", "zhHant", "ja", "en", "ko", "es", "fr", "de", "it", "pt", "id", "vi", "th"];
             if (!lang || !supportedLangs.includes(lang)) lang = 'en';
             switchLanguage(lang);
         };
     </script>
 </body>
+
 </html>
