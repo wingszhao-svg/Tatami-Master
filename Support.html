@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Tatami Master</title>
+    <!-- 网络字体：确保 CJK/Thai 字符在所有平台正确渲染 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Noto+Sans+TC:wght@400&family=Noto+Sans+Thai:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Thai', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+
+        h1, h2 { color: #2C3E36; }
+        
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 20px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: #2C3E36;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.2s;
+        }
+        .contact-btn:hover { opacity: 0.9; }
+
+
+
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+
+        /* 语言切换器样式 (复用 PrivacyPolicy.html) */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .lang-switcher label { font-weight: 600; color: #666; font-size: 13px; }
+        .select-wrapper { position: relative; display: inline-block; min-width: 120px; }
+        .select-trigger {
+            padding: 8px 32px 8px 12px;
+            font-size: 14px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            color: #2C3E36;
+            font-weight: 600;
+            display: block;
+            cursor: pointer;
+        }
+        select {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0; cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lang-switcher">
+        <label for="lang-select">Language:</label>
+        <div class="select-wrapper">
+            <span id="select-trigger" class="select-trigger">English</span>
+            <select id="lang-select" onchange="switchLanguage(this.value)">
+                <option value="zhHans">简体中文</option>
+                <option value="zhHant">繁體中文</option>
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+                <option value="ko">한국어</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="th">ไทย</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- English -->
+    <div class="lang-section" data-lang="en">
+        <h1>Tatami Master Support</h1>
+        <div class="card">
+            <p>We are here to help. If you have any questions, feedback, or need technical assistance with <strong>Tatami Master: Zen Room Design</strong>, please don't hesitate to reach out to us.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">Email Support</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Contact: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Simplified Chinese -->
+    <div class="lang-section" data-lang="zhHans">
+        <h1>叠席匠心 技术支持</h1>
+        <div class="card">
+            <p>我们随时为您提供帮助。如果您在运行 <strong>叠席匠心：榻榻米和室设计与排布</strong> 时遇到任何问题、有任何建议或需要技术支持，请随时联系我们。</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">联系我们</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">邮箱: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Traditional Chinese -->
+    <div class="lang-section" data-lang="zhHant">
+        <h1>疊席匠心 技術支持</h1>
+        <div class="card">
+            <p>我們隨時為您提供幫助。如果您在運行 <strong>疊席匠心：榻榻米和室設計與排佈</strong> 時遇到任何問題、有任何建議或需要技術支持，請隨時聯繫我們。</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">聯繫我們</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">郵箱: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Japanese -->
+    <div class="lang-section" data-lang="ja">
+        <h1>Tatami Master サポート</h1>
+        <div class="card">
+            <p>サポートが必要な場合は、お気軽にお問い合わせください。<strong>Tatami Master 畳の匠</strong> に関するご質問、フィードバック、または技術的なサポートが必要な場合は、メールでご連絡ください。</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">サポートにメール</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">連絡先: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Korean -->
+    <div class="lang-section" data-lang="ko">
+        <h1>다다미 명인 기술지원</h1>
+        <div class="card">
+            <p>도움이 필요하시면 언제든지 문의해 주세요。 <strong>다다미 명인: 젠(Zen) 인테리어</strong>에 대한 질문, 피드백 또는 기술 지원이 필요한 경우 이메일로 연락 주시기 바랍니다。</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">이메일 지원</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">연락처: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Spanish -->
+    <div class="lang-section" data-lang="es">
+        <h1>Soporte de Tatami Master</h1>
+        <div class="card">
+            <p>Estamos aquí para ayudar. Si tienes alguna pregunta, comentario o necesitas asistencia técnica con <strong>Tatami Master: Diseño Zen</strong>, no dudes en contactarnos.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">Soporte por correo</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Contacto: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- French -->
+    <div class="lang-section" data-lang="fr">
+        <h1>Assistance Tatami Master</h1>
+        <div class="card">
+            <p>Nous sommes là pour vous aider. Si vous avez des questions, des commentaires ou si vous avez besoin d'une assistance technique avec <strong>Tatami Master: Design Zen</strong>, n'hésitez pas à nous contacter.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">Assistance par e-mail</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Contact : vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- German -->
+    <div class="lang-section" data-lang="de">
+        <h1>Tatami Master Support</h1>
+        <div class="card">
+            <p>Wir sind hier, um zu helfen. Wenn Sie Fragen oder Feedback haben oder technische Unterstützung für <strong>Tatami Master: Japanisches Zen</strong> benötigen, zögern Sie bitte nicht, uns zu kontaktieren.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">E-Mail-Support</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Kontakt: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Italian -->
+    <div class="lang-section" data-lang="it">
+        <h1>Supporto Tatami Master</h1>
+        <div class="card">
+            <p>Siamo qui per aiutarti. Se hai domande, feedback o hai bisogno di assistenza tecnica con <strong>Tatami Master: Design Zen</strong>, non esitare a contattarci.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">Supporto via email</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Contatto: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Portuguese -->
+    <div class="lang-section" data-lang="pt">
+        <h1>Suporte Tatami Master</h1>
+        <div class="card">
+            <p>Estamos aqui para ajudar. Se você tiver alguma dúvida, feedback ou precisar de assistência técnica com <strong>Tatami Master: Design de Quarto</strong>, não hesite em entrar em contato.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">Suporte por e-mail</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Contato: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Indonesian -->
+    <div class="lang-section" data-lang="id">
+        <h1>Dukungan Tatami Master</h1>
+        <div class="card">
+            <p>Kami di sini untuk membantu. Jika Anda memiliki pertanyaan, umpan balik, atau memerlukan bantuan teknis dengan <strong>Tatami Master: Desain Kamar Zen</strong>, jangan ragu untuk menghubungi kami.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">Dukungan Email</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Kontak: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Vietnamese -->
+    <div class="lang-section" data-lang="vi">
+        <h1>Hỗ trợ Tatami Master</h1>
+        <div class="card">
+            <p>Chúng tôi luôn sẵn sàng giúp đỡ. Nếu bạn có bất kỳ câu hỏi, phản hồi hoặc cần hỗ trợ kỹ thuật với <strong>Tatami Master: Thiết Kế Phòng</strong>, vui lòng liên hệ với chúng tôi.</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">Hỗ trợ qua Email</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">Liên hệ: vincentapp3@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Thai -->
+    <div class="lang-section" data-lang="th">
+        <h1>การสนับสนุน Tatami Master</h1>
+        <div class="card">
+            <p>เราพร้อมช่วยเหลือคุณ หากคุณมีคำถาม ข้อเสนอแนะ หรือต้องการความช่วยเหลือทางเทคนิคเกี่ยวกับ <strong>Tatami Master: ออกแบบห้องเซน</strong> โปรดติดต่อเรา</p>
+            <a href="mailto:vincentapp3@gmail.com" class="contact-btn">ติดต่อผ่านอีเมล</a>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">อีเมล: vincentapp3@gmail.com</p>
+    </div>
+
+    <script>
+        const LANG_MAP = {
+            'zhHans': '简体中文',
+            'zhHant': '繁體中文',
+            'ja': '日本語',
+            'en': 'English',
+            'ko': '한국어',
+            'es': 'Español',
+            'fr': 'Français',
+            'de': 'Deutsch',
+            'it': 'Italiano',
+            'pt': 'Português',
+            'id': 'Bahasa Indonesia',
+            'vi': 'Tiếng Việt',
+            'th': 'ไทย'
+        };
+
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+            const activeSection = document.querySelector(`.lang-section[data-lang="${lang}"]`);
+            if (activeSection) activeSection.classList.add('active');
+            
+            document.getElementById('lang-select').value = lang;
+            document.getElementById('select-trigger').innerText = LANG_MAP[lang] || lang;
+            document.documentElement.lang = lang;
+
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+        }
+
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            let lang = urlParams.get('lang');
+            const supportedLangs = Object.keys(LANG_MAP);
+            if (!lang || !supportedLangs.includes(lang)) lang = 'en';
+            switchLanguage(lang);
+        };
+    </script>
+</body>
+
+</html>
